@@ -1,0 +1,82 @@
+<c:FragmentDefinition
+xmlns="sap.m"
+xmlns:c="sap.ui.core"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:fb="sap.ui.comp.filterbar"
+>
+
+<fb:FilterBar
+search="onFilterAvv"
+clear="onReset"
+showClearOnFB="true"
+useToolbar="false"
+showFilterConfiguration="false"
+filterContainerWidth="120px"
+>
+<fb:filterGroupItems>
+  <fb:FilterGroupItem
+    name="Range"
+    label="{i18n>Consegna}"
+    groupName="Filtri"
+    groupTitle="Filtri"
+    visibleInFilterBar="true"
+  >
+    <fb:control>
+      <DateRangeSelection
+        value="{
+          type: 'sap.ui.model.type.DateInterval',
+          formatOptions: {
+            pattern: 'dd/MM/yyyy'
+          },
+          parts: [{
+            type: 'sap.ui.model.type.Date',
+            path: '/start'
+          }, {
+            type: 'sap.ui.model.type.Date',
+            path: '/end'
+          }]
+        }"
+        dateValue="{Filtro>/begin}"
+        secondDateValue="{Filtro>/end}"
+        change="onChangeData"
+        placeholder="dd/MM/yyyy - dd/MM/yyyy"
+      />
+    </fb:control>
+  </fb:FilterGroupItem>
+  <fb:FilterGroupItem
+    name="Materiale"
+    label="{i18n>Materiale}"
+    groupName="Filtri"
+    groupTitle="Filtri"
+    visibleInFilterBar="true"
+  >
+    <fb:control>
+      <Input
+        value="{Filtro>/Materiale}"
+        showValueHelp="true"
+        valueHelpRequest=".handleValueHelp"
+        change="onChangeMat"
+      />
+    </fb:control>
+  </fb:FilterGroupItem>
+  <fb:FilterGroupItem
+  name="Fornitore"
+  label="{i18n>Fornitore}"
+  groupName="Filtri"
+  groupTitle="Filtri"
+  visibleInFilterBar="true"
+>
+  <fb:control>
+    <Input
+      value="{Filtro>/Fornitore}"
+      showValueHelp="true"
+      valueHelpRequest=".handleValueHelp"
+      change="onChangeMat"
+    />
+  </fb:control>
+</fb:FilterGroupItem>
+
+</fb:filterGroupItems>
+</fb:FilterBar>
+
+</c:FragmentDefinition>

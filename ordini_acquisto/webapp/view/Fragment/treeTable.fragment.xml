@@ -1,0 +1,137 @@
+<core:FragmentDefinition
+  xmlns="sap.ui.table"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:m="sap.m"
+  xmlns:u="sap.ui.unified"
+  xmlns:core="sap.ui.core"
+>
+  <TreeTable
+    id="TreeTableBasic"
+    rows="{path: 'ordineModel>/dati', parameters: {arrayNames: ['posizioni']}}"
+    selectionMode="None"
+    class="table" 
+    >
+    <extension>
+     <m:OverflowToolbar >
+        <m:MultiComboBox
+      id="MultiBox1"
+      width="300px"
+      items="{
+        path: 'Sorter>/'
+      }"
+      placeholder="Ordinare i dati per"
+    >
+      <core:Item
+        key="{Sorter>}"
+        text="{
+          parts: [{
+            path: 'Sorter>'
+          }],
+          formatter: '.formatText'
+        }"
+      />
+    </m:MultiComboBox>
+    <m:Button
+    icon="sap-icon://sort-descending"
+    press="handleSortButtonPressed"
+  />
+  <m:Button
+    icon="sap-icon://sort-ascending"
+    press="handleSortButtonPressed"
+  />
+  <m:Button
+    tooltip="Filter"
+    icon="sap-icon://filter"
+    press="openFragment"
+  />
+  <m:Button
+    icon="sap-icon://refresh"
+    press="refreshFilters"
+  />
+  
+</m:OverflowToolbar>
+    </extension>
+    
+    <columns>
+      <Column width="8rem">
+        <m:Label text="{i18n>Ordine}" />
+        <template>
+          <m:Text text="{ordineModel>ordine}" wrapping="false" />      
+        </template>
+      </Column>
+      <Column width="13rem" hAlign="Center" >
+        <m:Label text="{i18n>Fornitore}" />
+        <template>
+          <m:Text text="{ordineModel>fornitore}" wrapping="false" />
+        </template>
+      </Column>
+      <Column width="3rem" hAlign="Center">
+        <m:Label text="{i18n>Pos}" />
+        <template>
+          <m:Text text="{ordineModel>posizione}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="7rem">
+        <m:Label text="{i18n>Materiale}" />
+        <template>
+          <m:Text text="{ordineModel>Materiale}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="16rem">
+        <m:Label text="{i18n>TestoBreve}" />
+        <template>
+          <m:Text text="{ordineModel>testo_breve}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="5rem" hAlign="Center">
+        <m:Label text="{i18n>Quantita}" />
+        <template>
+          <m:Text text="{ordineModel>quantita}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="4rem" hAlign="Center">
+        <m:Label text="{i18n>UdM}" />
+        <template>
+          <m:Text text="{ordineModel>udm}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="6rem" hAlign="Center">
+        <m:Label text="{i18n>consegna}" />
+        <template>
+          <m:Text text="{ordineModel>data}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="7rem" hAlign="Center">
+        <m:Label text="{i18n>Prezzo}" />
+        <template>
+          <m:Text text="{ordineModel>prezzo}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="5rem" hAlign="Center">
+        <m:Label text="{i18n>Divisa}" />
+        <template>
+          <m:Text text="{ordineModel>divisa}" wrapping="false" />   
+        </template>
+      </Column>
+      <Column width="4rem" hAlign="Center">
+        <m:Label text="{i18n>Testi}" />
+        <template>
+          <core:Icon color="blue" size="1.5rem" src="{ordineModel>testi}" />  
+        </template>
+      </Column>
+      <Column width="6.3rem" hAlign="Center">
+        <m:Label text="{i18n>allegato}"  />
+        <template>
+          <core:Icon color="blue" size="1.5rem" src="{ordineModel>allegato}" />   
+        </template>
+      </Column>
+      <Column width="4rem" hAlign="Center">
+        <m:Label text="{i18n>Stato}" />
+        <template>
+          <core:Icon color="{ordineModel>color}" size="1.5rem" src="{ordineModel>stato}" />   
+        </template>
+      </Column>   
+    </columns>
+
+  </TreeTable>
+</core:FragmentDefinition>

@@ -33,19 +33,19 @@ floatingFooter="true"
         class="sapUiSmallMarginTopBottom"
         height="6vh"
     >
-    <Title
+    <!-- <Title
                     text="{i18n>titleprogetto}"
                     titleStyle="H3"
-                />
+                /> -->
         <ToolbarSpacer />
         <ToolbarSpacer />
-        <Image
+        <!-- <Image
                         alt="Rheinmetall Logo"	
                         height="38.00000000px"
                         width="100.00000000px"
                         src="../public/images/Rheinmetall_Logo_2021.jpg"
                 >
-                </Image>
+                </Image> -->
         <Text 
             text="AVIOMETAL, Via Sempione 15  Arsago Seprio VA    "
             class="title"

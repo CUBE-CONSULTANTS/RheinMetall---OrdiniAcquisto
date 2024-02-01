@@ -27,6 +27,7 @@ sap.ui.define([
             init: function () {
                 // call the base component's init function
                 UIComponent.prototype.init.apply(this, arguments);
+                sap.ui.getCore().getConfiguration().setLanguage("it");
 
                 // enable routing
                 this.getRouter().initialize();

@@ -1,6 +1,11 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel"],
-  function (Controller, JSONModel) {
+  ["sap/ui/core/mvc/Controller", 
+  "sap/ui/model/json/JSONModel",
+  
+
+  "sap/ui/core/Fragment",
+  ],
+  function (Controller, JSONModel,Fragment) {
     "use strict";
 
     return Controller.extend(
@@ -40,6 +45,26 @@ sap.ui.define(
             });
           });
         },
+        onOpenDialog: function(dialName, fragmName, self, ...oModel) {
+          let oView = this.getView();
+          dialName = self.dialName;
+          if (!dialName) {
+              dialName = Fragment.load({
+                  id: oView.getId(),
+                  name: fragmName,
+                  controller: self,
+              }).then((oValueHelpDialog) => {             
+                  oView.addDependent(oValueHelpDialog);
+                  oValueHelpDialog.setModel(this.getModel(...oModel));
+                  return oValueHelpDialog;
+              });
+              dialName.then(function(oValueHelpDialog) {
+                  oValueHelpDialog.open();
+              });
+          }else{                
+              self.dialName.open()
+          }        
+      },
         navback: function (rotta) {
           var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
           oRouter.navTo(rotta);

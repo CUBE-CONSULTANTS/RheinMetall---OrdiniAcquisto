@@ -1,0 +1,48 @@
+<c:FragmentDefinition
+	xmlns:m="sap.m"
+	xmlns:c="sap.ui.core"
+>
+	<m:Dialog
+		contentWidth="600px"
+		title="{i18n>Materialiprelevati}"
+	>
+		<!-- <m:FlexBox class="sapUiSmallMarginBegin"/>
+		<m:Table items="{modelloDialog>/}">
+			<m:columns>
+				<m:Column>
+					<m:Text text="{i18n>CodiceMateriale}" />
+				</m:Column>
+				<m:Column>
+					<m:Text text="{i18n>Descrizione}" />
+				</m:Column>
+				<m:Column>
+					<m:Text text="{i18n>Quantita}" />
+				</m:Column>
+				<m:Column>
+					<m:Text text="{i18n>UdM}" />
+				</m:Column>
+			</m:columns>
+			<m:ColumnListItem>
+				<m:cells>
+					<m:Text text="{modelloDialog>Matnr}" />
+				</m:cells>
+				<m:cells>
+					<m:Text text="{modelloDialog>Maktx}" />
+				</m:cells>
+				<m:cells>
+					<m:Text text="{modelloDialog>Menge}" />
+				</m:cells>
+				<m:cells>
+					<m:Text text="{modelloDialog>Meins}" />
+				</m:cells>
+			</m:ColumnListItem>
+		</m:Table>
+		<m:buttons>
+			<m:Button
+				press="onClose"
+				text="{i18n>Chiudi}"
+				icon="sap-icon://decline"
+			/>
+		</m:buttons> -->
+	</m:Dialog>
+</c:FragmentDefinition>

@@ -10,6 +10,7 @@
     rows="{path: 'ordineModel>/dati', parameters: {arrayNames: ['posizioni']}}"
     selectionMode="None"
     class="table" 
+    cellClick="onOpenBom"
     >
     <extension>
      <m:OverflowToolbar >
@@ -74,10 +75,10 @@
       <Column width="7rem">
         <m:Label text="{i18n>Materiale}" />
         <template>
-          <m:Text text="{ordineModel>Materiale}" wrapping="false" />   
+          <m:Text text="{ordineModel>Materiale}" wrapping="false"  />   
         </template>
       </Column>
-      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '18.7rem' : '25rem' }">
+      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '17.7rem' : '23.9rem' }">
         <m:Label text="{i18n>TestoBreve}" />
         <template>
           <m:Text text="{ordineModel>testo_breve}" wrapping="false" />   

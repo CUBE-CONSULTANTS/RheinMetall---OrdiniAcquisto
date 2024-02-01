@@ -1,12 +1,13 @@
 <mvc:View controllerName="ordiniacquisto.ordiniacquisto.controller.Home"
 xmlns:mvc="sap.ui.core.mvc"
 displayBlock="true"
+height="100%"
 xmlns:core="sap.ui.core"
 xmlns="sap.m"
 xmlns:layout="sap.ui.layout">
     <Page
 class="sapUiResponsivePadding--header sapUiResponsivePadding--footer sapUiResponsivePadding--content"
-floatingFooter="true" showFooter="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
+floatingFooter="true" showFooter="true" 
 >
     <customHeader>
         <Bar>
@@ -46,9 +47,10 @@ floatingFooter="true" showFooter="{= ${userModel>/tipoUtente} === 'Interno' ? fa
         <core:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.treeTable" />
     </content>
     <footer>
-        <OverflowToolbar design="Solid">    
+        <OverflowToolbar design="Solid" >    
         <ToolbarSpacer/>
         <Button
+        visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
         icon="sap-icon://save"
         text="{i18n>Save}"
         type="Emphasized"    

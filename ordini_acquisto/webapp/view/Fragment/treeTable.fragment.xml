@@ -53,13 +53,13 @@
     </extension>
     
     <columns>
-      <Column width="8rem">
+      <Column width="8.5rem">
         <m:Label text="{i18n>Ordine}" />
         <template>
           <m:Text text="{ordineModel>ordine}" wrapping="false" />      
         </template>
       </Column>
-      <Column width="13rem" hAlign="Center" >
+      <Column width="13rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }" >
         <m:Label text="{i18n>Fornitore}" />
         <template>
           <m:Text text="{ordineModel>fornitore}" wrapping="false" />
@@ -77,7 +77,7 @@
           <m:Text text="{ordineModel>Materiale}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="16rem">
+      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '18.7rem' : '25rem' }">
         <m:Label text="{i18n>TestoBreve}" />
         <template>
           <m:Text text="{ordineModel>testo_breve}" wrapping="false" />   
@@ -95,10 +95,16 @@
           <m:Text text="{ordineModel>udm}" wrapping="false" />   
         </template>
       </Column>
+      <Column width="6rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
+        <m:Label text="{i18n>dataDoc}" />
+        <template>
+          <m:Text text="{ordineModel>data}" wrapping="false" />   
+        </template>
+      </Column>
       <Column width="6rem" hAlign="Center">
         <m:Label text="{i18n>consegna}" />
         <template>
-          <m:Text text="{ordineModel>data}" wrapping="false" />   
+          <m:Text text="{ordineModel>consegna}" wrapping="false" />   
         </template>
       </Column>
       <Column width="7rem" hAlign="Center">
@@ -107,28 +113,48 @@
           <m:Text text="{ordineModel>prezzo}" wrapping="false" />   
         </template>
       </Column>
-      <Column width="5rem" hAlign="Center">
+      <Column width="4rem" hAlign="Center">
         <m:Label text="{i18n>Divisa}" />
         <template>
           <m:Text text="{ordineModel>divisa}" wrapping="false" />   
         </template>
       </Column>
+      <Column width="3rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
+        <m:Label text="{i18n>Per}" />
+        <template>
+          <m:Text text="{ordineModel>num}" wrapping="false"  />   
+        </template>
+      </Column>
+      <Column width="3rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
+        <m:Label text="{i18n>UdM}" />
+        <template>
+          <m:Text text="{ordineModel>udm}" wrapping="false" />   
+        </template>
+      </Column>
       <Column width="4rem" hAlign="Center">
         <m:Label text="{i18n>Testi}" />
         <template>
-          <core:Icon color="blue" size="1.5rem" src="{ordineModel>testi}" />  
+          <m:Button
+              icon="{ordineModel>testi}"
+              type="{ordineModel>btnType}"
+              visible="{= !${ordineModel>testi}? false : true }"
+              />
         </template>
       </Column>
-      <Column width="6.3rem" hAlign="Center">
+      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '4.5rem' : '4rem' }" hAlign="Center">
         <m:Label text="{i18n>allegato}"  />
         <template>
-          <core:Icon color="blue" size="1.5rem" src="{ordineModel>allegato}" />   
+          <m:Button
+              icon="{ordineModel>allegato}"
+              type="{ordineModel>btnType}"
+              visible="{= !${ordineModel>allegato}? false : true }"
+              />
         </template>
       </Column>
-      <Column width="4rem" hAlign="Center">
+      <Column width="4.7rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }">
         <m:Label text="{i18n>Stato}" />
         <template>
-          <core:Icon color="{ordineModel>color}" size="1.5rem" src="{ordineModel>stato}" />   
+          <core:Icon  height="2.5rem" color="{ordineModel>color}" size="1.3rem" src="{ordineModel>stato}" />   
         </template>
       </Column>   
     </columns>

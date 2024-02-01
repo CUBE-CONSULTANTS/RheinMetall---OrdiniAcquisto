@@ -6,6 +6,7 @@ xmlns:fb="sap.ui.comp.filterbar"
 >
 
 <fb:FilterBar
+class="sapUiSmallMarginTop"
 search="onFilterAvv"
 clear="onReset"
 showClearOnFB="true"
@@ -64,7 +65,7 @@ filterContainerWidth="120px"
   label="{i18n>Fornitore}"
   groupName="Filtri"
   groupTitle="Filtri"
-  visibleInFilterBar="true"
+  visibleInFilterBar="  "
 >
   <fb:control>
     <Input

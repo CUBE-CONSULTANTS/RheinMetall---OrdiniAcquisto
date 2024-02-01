@@ -6,7 +6,7 @@ xmlns="sap.m"
 xmlns:layout="sap.ui.layout">
     <Page
 class="sapUiResponsivePadding--header sapUiResponsivePadding--footer sapUiResponsivePadding--content"
-floatingFooter="true"
+floatingFooter="true" showFooter="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
 >
     <customHeader>
         <Bar>
@@ -29,35 +29,31 @@ floatingFooter="true"
     </customHeader>
 
     <OverflowToolbar
+        visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
         design="Solid"
         class="sapUiSmallMarginTopBottom"
         height="6vh"
     >
-    <!-- <Title
-                    text="{i18n>titleprogetto}"
-                    titleStyle="H3"
-                /> -->
         <ToolbarSpacer />
-        <ToolbarSpacer />
-        <!-- <Image
-                        alt="Rheinmetall Logo"	
-                        height="38.00000000px"
-                        width="100.00000000px"
-                        src="../public/images/Rheinmetall_Logo_2021.jpg"
-                >
-                </Image> -->
-        <Text 
+        <ToolbarSpacer />   
+        <Title
             text="AVIOMETAL, Via Sempione 15  Arsago Seprio VA    "
-            class="title"
-            visible="false"
+            titleStyle="H4"
         />
     </OverflowToolbar>
     <content>
         <core:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.filterBar" />
         <core:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.treeTable" />
     </content>
-    <footer class="sapUiLargeMarginTop">
-        <OverflowToolbar design="Transparent"></OverflowToolbar>
+    <footer>
+        <OverflowToolbar design="Solid">    
+        <ToolbarSpacer/>
+        <Button
+        icon="sap-icon://save"
+        text="{i18n>Save}"
+        type="Emphasized"    
+    />
+        </OverflowToolbar>
     </footer>
     </Page>
 </mvc:View>

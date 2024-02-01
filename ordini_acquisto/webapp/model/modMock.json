@@ -1,72 +1,123 @@
 {
   "dati": [
     {
-      "ordine": "4500043986",
-      "fornitore": "584 S.T.L. IMBALLAGGI SRL",
+      "ordine": "4500041619",
+      "fornitore": "5831 ELTOS SPA",
       "testi": "sap-icon://document-text",
-      "color2": "black",
+      "btnType": "Emphasized",
       "allegato": "sap-icon://search",
       "stato": "sap-icon://status-positive",
+      "data": "22.01.2024",
       "color": "green",
       "posizioni": [
         {
+          "btnType": "Ghost",
           "posizione": "10",
-          "Materiale": "",
-          "testo_breve": "Morale 90x90x2150 mm",
-          "data": "31.12.2024",
-          "quantita": "100",
+          "Materiale": "RU403051AE",
+          "testo_breve": "CS (SCHEDA GIUNZIONE AMMR-DT)",
+          "consegna": "22.05.2023",
+          "quantita": "3",
           "udm": "PZ",
-          "prezzo": "9,40",
+          "prezzo": "694,00",
           "divisa": "EUR",
+          "num":"1",
           "testi": ""
         },
         {
+          "btnType": "Ghost",
           "posizione": "20",
-          "Materiale": "",
-          "testo_breve": "Pedana 80x120 cm ispm15",
-          "data": "31.12.2024",
-          "quantita": "50",
+          "Materiale": "RU402679AE",
+          "testo_breve": "CS  (8-WAY SPLITTER)",
+          "consegna": "22.05.2023",
+          "quantita": "12",
           "udm": "PZ",
-          "prezzo": "13,30",
+          "prezzo": "193,00",
           "divisa": "EUR",
+          "num":"1",
+          "testi": "sap-icon://document-text"
+        },
+        {
+          "btnType": "Ghost",
+          "posizione": "30",
+          "Materiale": "RU402971AE",
+          "testo_breve": "CIM (MOLTIPLICATORE)",
+          "consegna": "16.06.2023",
+          "quantita": "10",
+          "udm": "PZ",
+          "prezzo": "1.570,00",
+          "divisa": "EUR",
+          "num":"1",
+          "testi": "sap-icon://document-text"
+        },
+        {
+          "btnType": "Ghost",
+          "posizione": "40",
+          "Materiale": "RU402971AE",
+          "testo_breve": "CIM (MOLTIPLICATORE)",
+          "consegna": "16.06.2023",
+          "quantita": "10",
+          "udm": "PZ",
+          "prezzo": "1.570,00",
+          "divisa": "EUR",
+          "num":"1",
+          "testi": "sap-icon://document-text"
+        },
+        {
+          "btnType": "Ghost",
+          "posizione": "50",
+          "Materiale": "RU402971AE",
+          "testo_breve": "CIM (MOLTIPLICATORE)",
+          "consegna": "16.06.2023",
+          "quantita": "10",
+          "udm": "PZ",
+          "prezzo": "1.570,00",
+          "divisa": "EUR",
+          "num":"1",
           "testi": "sap-icon://document-text"
         }
       ]
     },
     {
-      "ordine": "4500043985",
-      "fornitore": "3576 P.F. ELETTRONICA S.n.c.",
+      "btnType": "Emphasized",
+      "ordine": "6500000160",
+      "fornitore": "20016 RHEINMETALL AIR DEFENCE AG",
       "testi": "sap-icon://document-text",
+      "data":"20.01.2024",
       "allegato": "sap-icon://search",
       "stato": "sap-icon://status-negative",
       "color": "red",
       "posizioni": [
         {
+          "btnType": "Ghost",
           "posizione": "10",
-          "Materiale": "55532213788",
-          "testo_breve": "CI. SDRAM 46V16M16 TSOP-66 -40 +85",
-          "data": "10.02.2024",
-          "quantita": "100",
+          "Materiale": "DW102769A-G01",
+          "testo_breve": "SERVOMOTOR",
+          "consegna": "26.01.2024",
+          "quantita": "6",
           "udm": "PZ",
-          "prezzo": "38,00",
-          "divisa": "EUR",
+          "num":"1",
+          "prezzo": "8.790,00",
+          "divisa": "CHF",
           "testi": "sap-icon://document-text"
         }
       ]
     },
     {
+      "btnType": "Emphasized",
       "ordine": "4500043984",
       "fornitore": "5370 TECMA Spa",
       "testi": "sap-icon://document-text",
       "allegato": "sap-icon://search",
       "stato": "sap-icon://status-positive",
+      "data": "22.01.2024",
       "color": "green",
       "posizioni": [
         {
+          "btnType": "Ghost",
           "posizione": "10",
-          "Materiale": "",
-          "testo_breve": "Stratocell L bianco 1200x2000x50 mm",
-          "data": "31.12.2024",
+          "Materiale": "55532213788",
+          "testo_breve": "CI. SDRAM 46V16M16 TSOP-66 -40 +85",
+          "consegna": "10.02.2024",
           "quantita": "100",
           "udm": "PZ",
           "prezzo": "10,56",
@@ -74,10 +125,11 @@
           "testi": ""
         },
         {
+          "btnType": "Ghost",
           "posizione": "20",
           "Materiale": "",
           "testo_breve": "Stratocell L nero 1200x2000x20 mm",
-          "data": "31.12.2024",
+          "consegna": "31.12.2024",
           "quantita": "50",
           "udm": "PZ",
           "prezzo": "24,81",
@@ -85,10 +137,11 @@
           "testi": "sap-icon://document-text"
         },
         {
+          "btnType": "Ghost",
           "posizione": "30",
           "Materiale": "",
           "testo_breve": "Stratocell L nero 1200x2000x20 mm",
-          "data": "31.12.2024",
+          "consegna": "31.12.2024",
           "quantita": "50",
           "udm": "PZ",
           "prezzo": "22,73",
@@ -96,10 +149,11 @@
           "testi": ""
         },
         {
+          "btnType": "Ghost",
           "posizione": "40",
           "Materiale": "",
           "testo_breve": "lastra di PE nero spess. 100 mm",
-          "data": "31.12.2024",
+          "consegna": "31.12.2024",
           "quantita": "10",
           "udm": "PZ",
           "prezzo": "138,10",
@@ -108,7 +162,9 @@
         }
       ]
     },
-    {
+    { 
+      "data":"",
+      "btnType": "Emphasized",
       "ordine": "4500043983",
       "fornitore": "3527 Energy Team S.p.A.",
       "testi": "sap-icon://document-text",
@@ -117,10 +173,11 @@
       "color": "green",
       "posizioni": [
         {
+          "btnType": "Ghost",
           "posizione": "10",
           "Materiale": "",
           "testo_breve": "MANUT. ORD. ANALIZ. RETE 2024",
-          "data": "31.12.2024",
+          "consegna": "31.12.2024",
           "quantita": "1",
           "udm": "NRO",
           "prezzo": "675,00",
@@ -129,7 +186,9 @@
         }
       ]
     },
-    {
+    { 
+      "data":"",
+      "btnType": "Emphasized",
       "ordine": "4500043982",
       "fornitore": "1181 SIMA S.a.s.",
       "testi": "sap-icon://document-text",
@@ -138,10 +197,11 @@
       "color": "green",
       "posizioni": [
         {
+          "btnType": "Ghost",
           "posizione": "10",
           "Materiale": "",
           "testo_breve": "MANUT.ORD.CARROPONTE 2024",
-          "data": "31.12.2024",
+          "consegna": "31.12.2024",
           "quantita": "1",
           "udm": "UR",
           "prezzo": "7.760,00",

@@ -5,6 +5,7 @@ sap.ui.define(
     "sap/ui/model/json/JSONModel",
     "sap/m/MessageBox",
     "sap/ui/core/Fragment",
+    "sap/m/PDFViewer",
   ],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -12,7 +13,7 @@ sap.ui.define(
   function (Controller,
 	BaseController,
 	JSONModel,
-	MessageBox,Fragment) {
+	MessageBox,Fragment, PDFViewer) {
     "use strict";
 
     return BaseController.extend(
@@ -25,6 +26,9 @@ sap.ui.define(
 
           let oModel = new JSONModel(data);
           this.setModel(oModel, "ordineModel");
+
+          this._pdfViewer = new PDFViewer();
+			    this.getView().addDependent(this._pdfViewer);
         },
         onOpenBom: function(oEvent){
           debugger
@@ -81,7 +85,12 @@ sap.ui.define(
           }    
         },
         onSelectAllegato: function (oEvent){
-          oEvent.getSource()
+          debugger
+          let pdfSource = oEvent.getSource().getBindingContext("allegatiDialog").getObject().src
+          let baseUrl = window.location.origin
+          let urlSource = baseUrl + pdfSource 
+          this._pdfViewer.setSource(urlSource);
+          this._pdfViewer.open();
         }
       }
     );

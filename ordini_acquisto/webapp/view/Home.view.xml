@@ -30,17 +30,17 @@ floatingFooter="true" showFooter="true"
     </customHeader>
 
     <OverflowToolbar
-        visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
+        visible="false"
         design="Solid"
         class="sapUiSmallMarginTopBottom"
         height="6vh"
     >
         <ToolbarSpacer />
         <ToolbarSpacer />   
-        <Title
+        <!-- <Title
             text="AVIOMETAL, Via Sempione 15  Arsago Seprio VA    "
             titleStyle="H4"
-        />
+        /> -->
     </OverflowToolbar>
     <content>
         <core:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.filterBar" />

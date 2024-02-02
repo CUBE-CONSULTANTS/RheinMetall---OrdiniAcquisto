@@ -30,18 +30,18 @@ sap.ui.define(
           this._pdfViewer = new PDFViewer();
 			    this.getView().addDependent(this._pdfViewer);
         },
-        onOpenBom: function(oEvent){
-          debugger
-          let oDatiMat = this.getModel("ordineModel").getData().bom[0]
-          let oModel = new JSONModel(oDatiMat)
+        // onOpenBom: function(oEvent){
+        //   debugger
+        //   let oDatiMat = this.getModel("ordineModel").getData().bom[0]
+        //   let oModel = new JSONModel(oDatiMat)
       
-          if(oEvent.getParameter("cellControl").getBindingInfo("text").binding.getPath() === 'Materiale'){
-            if(oEvent.getParameter("cellControl").getBindingInfo("text").binding.getValue() === oDatiMat.Materiale){
-              this.setModel(oModel, "bomDialog");
-              this.onOpenDialog("nDialog","ordiniacquisto.ordiniacquisto.view.Fragment.bomDialog",this,"bomDialog")
-            }
-          }
-        },
+        //   if(oEvent.getParameter("cellControl").getBindingInfo("text").binding.getPath() === 'Materiale'){
+        //     if(oEvent.getParameter("cellControl").getBindingInfo("text").binding.getValue() === oDatiMat.Materiale){
+        //       this.setModel(oModel, "bomDialog");
+        //       this.onOpenDialog("nDialog","ordiniacquisto.ordiniacquisto.view.Fragment.bomDialog",this,"bomDialog")
+        //     }
+        //   }
+        // },
         onCloseDialog: function(oEvent){
           oEvent.getSource().getParent().close()
         },

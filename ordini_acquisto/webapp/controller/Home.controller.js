@@ -6,6 +6,7 @@ sap.ui.define(
     "sap/m/MessageBox",
     "sap/ui/core/Fragment",
     "sap/m/PDFViewer",
+    "sap/ui/core/URI",
   ],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -13,7 +14,7 @@ sap.ui.define(
   function (Controller,
 	BaseController,
 	JSONModel,
-	MessageBox,Fragment, PDFViewer) {
+	MessageBox,Fragment, PDFViewer, URI) {
     "use strict";
 
     return BaseController.extend(
@@ -86,11 +87,7 @@ sap.ui.define(
         },
         onSelectAllegato: function (oEvent){
           debugger
-          let pdfSource = oEvent.getSource().getBindingContext("allegatiDialog").getObject().src
-          let baseUrl = window.location.origin
-          let urlSource = baseUrl + pdfSource 
-          this._pdfViewer.setSource(urlSource);
-          this._pdfViewer.open();
+
         }
       }
     );

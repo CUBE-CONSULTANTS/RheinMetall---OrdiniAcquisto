@@ -41,6 +41,9 @@ sap.ui.define(
         onCloseDialog: function(oEvent){
           oEvent.getSource().getParent().close()
         },
+        onCloseAllegati: function(oEvent){
+          oEvent.getSource().getParent().getParent().close()
+        },
         onOpenTesti:function(oEvent){
           debugger
           this.setModel(new JSONModel(), "testiModel");
@@ -72,9 +75,14 @@ sap.ui.define(
           let oAllegatiMat = this.getModel("ordineModel").getData().allegati[0]
           let oModel = new JSONModel(oAllegatiMat)
           let order = oEvent.getSource().getBindingContext("ordineModel").getObject().ordine
+          if(oAllegatiMat.Ordine === order){
           this.setModel(oModel, "allegatiDialog");
           this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.listAllegati",this,"allegatiDialog")     
+          }    
         },
+        onSelectAllegato: function (oEvent){
+          oEvent.getSource()
+        }
       }
     );
   }

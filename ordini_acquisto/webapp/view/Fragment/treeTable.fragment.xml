@@ -78,7 +78,7 @@
           <m:Text text="{ordineModel>Materiale}" wrapping="false"  />   
         </template>
       </Column>
-      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '17.7rem' : '23.9rem' }">
+      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '17.7rem' : '24.9rem' }">
         <m:Label text="{i18n>TestoBreve}" />
         <template>
           <m:Text text="{ordineModel>testo_breve}" wrapping="false" />   
@@ -139,6 +139,7 @@
               icon="{ordineModel>testi}"
               type="{ordineModel>btnType}"
               visible="{= !${ordineModel>testi}? false : true }"
+              press="onOpenTesti"
               />
         </template>
       </Column>
@@ -149,6 +150,7 @@
               icon="{ordineModel>allegato}"
               type="{ordineModel>btnType}"
               visible="{= !${ordineModel>allegato}? false : true }"
+              press="onOpenAllegati"
               />
         </template>
       </Column>

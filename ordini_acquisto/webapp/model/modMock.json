@@ -4,7 +4,7 @@
       "ordine": "4500041619",
       "fornitore": "5831 ELTOS SPA",
       "testi": "sap-icon://document-text",
-      "testiPop":"230303:05:00.000",
+      "testiPop": "230303:05:00.000",
       "btnType": "Emphasized",
       "allegato": "sap-icon://search",
       "stato": "sap-icon://status-positive",
@@ -21,9 +21,9 @@
           "udm": "PZ",
           "prezzo": "694,00",
           "divisa": "EUR",
-          "num":"1",
+          "num": "1",
           "testi": "sap-icon://document-text",
-          "testiPop":"Inclusi costi NR di 480EUR"
+          "testiPop": "Inclusi costi NR di 480EUR"
         },
         {
           "btnType": "Ghost",
@@ -35,7 +35,7 @@
           "udm": "PZ",
           "prezzo": "193,00",
           "divisa": "EUR",
-          "num":"1",
+          "num": "1",
           "testi": ""
         },
         {
@@ -48,9 +48,9 @@
           "udm": "PZ",
           "prezzo": "1.570,00",
           "divisa": "EUR",
-          "num":"1",
+          "num": "1",
           "testi": "sap-icon://document-text",
-          "testiPop":"Inclusi costi NR di 1200Eur"
+          "testiPop": "Inclusi costi NR di 1200Eur"
         },
         {
           "btnType": "Ghost",
@@ -62,9 +62,9 @@
           "udm": "PZ",
           "prezzo": "1.570,00",
           "divisa": "EUR",
-          "num":"1",
+          "num": "1",
           "testi": "sap-icon://document-text",
-          "testiPop":"Inclusi costi NR di 1200Eur"
+          "testiPop": "Inclusi costi NR di 1200Eur"
         },
         {
           "btnType": "Ghost",
@@ -76,9 +76,9 @@
           "udm": "PZ",
           "prezzo": "1.570,00",
           "divisa": "EUR",
-          "num":"1",
+          "num": "1",
           "testi": "sap-icon://document-text",
-          "testiPop":"Inclusi costi NR di 1200Eur"
+          "testiPop": "Inclusi costi NR di 1200Eur"
         }
       ]
     },
@@ -87,7 +87,7 @@
       "ordine": "6500000160",
       "fornitore": "20016 RHEINMETALL AIR DEFENCE AG",
       "testi": "sap-icon://document-text",
-      "data":"20.01.2024",
+      "data": "20.01.2024",
       "allegato": "sap-icon://search",
       "stato": "sap-icon://status-negative",
       "color": "red",
@@ -100,7 +100,7 @@
           "consegna": "26.01.2024",
           "quantita": "6",
           "udm": "PZ",
-          "num":"1",
+          "num": "1",
           "prezzo": "8.790,00",
           "divisa": "CHF",
           "testi": "sap-icon://document-text"
@@ -167,8 +167,8 @@
         }
       ]
     },
-    { 
-      "data":"",
+    {
+      "data": "",
       "btnType": "Emphasized",
       "ordine": "4500043983",
       "fornitore": "3527 Energy Team S.p.A.",
@@ -191,8 +191,8 @@
         }
       ]
     },
-    { 
-      "data":"",
+    {
+      "data": "",
       "btnType": "Emphasized",
       "ordine": "4500043982",
       "fornitore": "1181 SIMA S.a.s.",
@@ -215,73 +215,93 @@
         }
       ]
     }
-    
   ],
+
   "bom": [
     {
-      "Pos": "0001",
-      "TipoPos": "R",
-      "Componente": "Q4A0000796",
-      "Definizione componente": "LAMINATO FR408HR 0,152MM CU 2X35UM",
-      "Qta":"2",
-      "UdM":"PZ",
-      "Ass":"y",
-      "Sps":"n",
-      "QtaFissa":"y",
-      "tEsteso":"sap-icon://sap-icon://document-text",
-      "Allegati":"sap-icon://search"
-    },
+      "Materiale": "RU403051AE",
+      "posizioni": [
+        {
+          "Pos": "0001",
+          "TipoPos": "R",
+          "Componente": "Q4A0000796",
+          "DefinizioneC": "LAMINATO FR408HR 0,152MM CU 2X35UM",
+          "Qta": "2",
+          "UdM": "PZ",
+          "Ass": "True",
+          "Sps": "False",
+          "QtaFissa": "True",
+          "tEsteso": "sap-icon://document-text",
+          "Allegati": "sap-icon://search"
+        },
+        {
+          "Pos": "0004",
+          "TipoPos": "R",
+          "Componente": "Q4A0000796",
+          "DefinizioneC": "LAMINATO FR408HR 0,457MM CU 2X35UM",
+          "Qta": "1",
+          "UdM": "PZ",
+          "Ass": "True",
+          "Sps": "False",
+          "QtaFissa": "True",
+          "tEsteso": "sap-icon://document-text",
+          "Allegati": "sap-icon://search"
+        },
+        {
+          "Pos": "0007",
+          "TipoPos": "L",
+          "Componente": "Q4A0000792",
+          "DefinizioneC": "PREPREG FR408HR 106 20X2''X0,058MM",
+          "Qta": "0,001",
+          "UdM": "CM2",
+          "Ass": "False",
+          "Sps": "True",
+          "QtaFissa": "False",
+          "tEsteso": "sap-icon://document-text",
+          "Allegati": "sap-icon://search"
+        },
+        {
+          "Pos": "0010",
+          "TipoPos": "L",
+          "Componente": "Q4A0000798",
+          "DefinizioneC": "PREPREG FR408HR 1080 20X24''X0,081MM",
+          "Qta": "0,001",
+          "UdM": "CM2",
+          "Ass": "False",
+          "Sps": "False",
+          "QtaFissa": "False",
+          "tEsteso": "sap-icon://document-text",
+          "Allegati": "sap-icon://search"
+        },
+        {
+          "Pos": "0020",
+          "TipoPos": "X",
+          "Componente": "RU501310AV",
+          "DefinizioneC": "SCHEDA GIUNZIONE AMMR-DT (SD)",
+          "Qta": "1",
+          "UdM": "PZ",
+          "Ass": "True",
+          "Sps": "False",
+          "QtaFissa": "True",
+          "tEsteso": "sap-icon://document-text",
+          "Allegati": "sap-icon://search"
+        }
+      ]
+    }
+  ],
+  "allegati": [
     {
-      "Pos": "0004",
-      "TipoPos": "R",
-      "Componente": "Q4A0000796",
-      "Definizione componente": "LAMINATO FR408HR 0,457MM CU 2X35UM",
-      "Qta":"1",
-      "UdM":"PZ",
-      "Ass":"y",
-      "Sps":"n",
-      "QtaFissa":"y",
-      "tEsteso":"sap-icon://sap-icon://document-text",
-      "Allegati":"sap-icon://search"
-    },
-    {
-      "Pos": "0007",
-      "TipoPos": "L",
-      "Componente": "Q4A0000792",
-      "Definizione componente": "PREPREG FR408HR 106 20X2''X0,058MM",
-      "Qta":"0,001",
-      "UdM":"CM2",
-      "Ass":"y",
-      "Sps":"n",
-      "QtaFissa":"y",
-      "tEsteso":"sap-icon://sap-icon://document-text",
-      "Allegati":"sap-icon://search"
-    },
-    {
-      "Pos": "0010",
-      "TipoPos": "L",
-      "Componente": "Q4A0000798",
-      "Definizione componente": "PREPREG FR408HR 1080 20X24''X0,081MM",
-      "Qta":"0,001",
-      "UdM":"CM2",
-      "Ass":"y",
-      "Sps":"n",
-      "QtaFissa":"y",
-      "tEsteso":"sap-icon://sap-icon://document-text",
-      "Allegati":"sap-icon://search"
-    },
-    {
-      "Pos": "0020",
-      "TipoPos": "X",
-      "Componente": "RU501310AV",
-      "Definizione componente": "SCHEDA GIUNZIONE AMMR-DT (SD)",
-      "Qta":"1",
-      "UdM":"PZ",
-      "Ass":"y",
-      "Sps":"n",
-      "QtaFissa":"y",
-      "tEsteso":"sap-icon://sap-icon://document-text",
-      "Allegati":"sap-icon://search"
+      "Ordine": "6500000160",
+      "doc": [
+        {
+          "name": "Purchade Order",
+          "src": "ordini_acquisto/webapp/public/documents/6500000160.pdf"
+        },
+        {
+          "name": "Quotation No. 32022618",
+          "src": "ordini_acquisto/webapp/public/documents/6500000160_Quotation32022618_20240201135031.137_X.pdf"
+        }
+      ]
     }
   ]
 }

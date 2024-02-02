@@ -65,7 +65,7 @@ filterContainerWidth="120px"
   label="{i18n>Fornitore}"
   groupName="Filtri"
   groupTitle="Filtri"
-  visibleInFilterBar="  "
+  visibleInFilterBar="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
 >
   <fb:control>
     <Input

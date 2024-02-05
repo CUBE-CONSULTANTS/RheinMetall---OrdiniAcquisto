@@ -7,7 +7,7 @@
 		placement="Auto"
 		showHeader="false"    
 	>
-    <VBox height="15vh" width="20rem" 
+    <VBox height="30vh" width="40rem" 
     >
     <Text class="sapUiResponsiveMargin" text="{testiPopover>/}"/>
     </VBox>

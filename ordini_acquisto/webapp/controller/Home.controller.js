@@ -6,7 +6,6 @@ sap.ui.define(
     "sap/m/MessageBox",
     "sap/ui/core/Fragment",
     "sap/m/PDFViewer",
-    "sap/ui/core/URI",
   ],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -14,7 +13,7 @@ sap.ui.define(
   function (Controller,
 	BaseController,
 	JSONModel,
-	MessageBox,Fragment, PDFViewer, URI) {
+	MessageBox,Fragment, PDFViewer) {
     "use strict";
 
     return BaseController.extend(
@@ -77,18 +76,31 @@ sap.ui.define(
         },
         onOpenAllegati:function(oEvent){
           debugger
-          let oAllegatiMat = this.getModel("ordineModel").getData().allegati[0]
-          let oModel = new JSONModel(oAllegatiMat)
+          
           let order = oEvent.getSource().getBindingContext("ordineModel").getObject().ordine
-          if(oAllegatiMat.Ordine === order){
-          this.setModel(oModel, "allegatiDialog");
-          this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.listAllegati",this,"allegatiDialog")     
-          }    
+          if(order === '6500000160'){
+            let oAllegatiMat = this.getModel("ordineModel").getData().allegati[0]
+            let oModel = new JSONModel(oAllegatiMat)        
+            this.setModel(oModel, "allegatiDialog");
+            this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.listAllegati",this,"allegatiDialog")
+          }else if( order === '4500041619'){
+            let oAllegatiMat=  this.getModel("ordineModel").getData().allegati[1]
+            let oModel = new JSONModel(oAllegatiMat)        
+            this.setModel(oModel, "allegatiDialog");
+            this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.listAllegati",this,"allegatiDialog")
+          } 
         },
         onSelectAllegato: function (oEvent){
           debugger
-
-        }
+          let src = oEvent.getSource().getBindingContext("allegatiDialog").getObject().src
+          let pdfModel = new JSONModel()
+          pdfModel.setProperty("/source",src)
+          this.setModel(pdfModel,"pdfModel")
+          this.onOpenDialog("lDialog","ordiniacquisto.ordiniacquisto.view.Fragment.allegato",this,"pdfModel")       
+          },
+          onCloseAllegati: function (oEvent){
+            oEvent.getSource().getParent().getParent().close()
+          },
       }
     );
   }

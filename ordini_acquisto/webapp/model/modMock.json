@@ -4,7 +4,7 @@
       "ordine": "4500041619",
       "fornitore": "5831 ELTOS SPA",
       "testi": "sap-icon://document-text",
-      "testiPop": "230303:05:00.000",
+      "testiPop": "230303:05:00.000 -- documentazione di collaudo:  incoming.inspection@rheinmetall.it -- Informazioni di qualità:quality.supplier.rhi@rheinmetall.it",
       "btnType": "Emphasized",
       "allegato": "sap-icon://search",
       "stato": "sap-icon://status-positive",
@@ -83,6 +83,44 @@
       ]
     },
     {
+      "data": "",
+      "btnType": "Emphasized",
+      "ordine": "4500036206",
+      "fornitore": "20004 A.V. MARANO & CO. INC.",
+      "testi": "sap-icon://document-text",
+      "allegato": "sap-icon://search",
+      "stato": "sap-icon://status-positive",
+      "testiPop": "The General Conditions for Orders, overleaf printed,  are applicable supplementary to the orders by Rheinmetall Italia SpA. and shall be deemed to be accepted by the Supplier. Conditions of Supplier that differ from orders by Rheinmetall Italia as well as from the General Conditions for Orders are valid only to the extent that they have been expressly accepted by Rheinmetall Italia. The Supplier shall deliver the Goods on the date specified in the Order. The delivery deadlines or dates named in the order shall be binding. Invoices shall be issued separately  for each different order, with an indication of the order reference and of the related item. Invoices that are not properly drawn up shall be deemed to not have been received and will be returned by Rheinmetall Italia SpA. --documentazione di collaudo:  incoming.inspection@rheinmetall.it -- Informazioni di qualità: quality.supplier.rhi@rheinmetall.it",
+      "color": "green",
+      "posizioni": [
+        {
+          "btnType": "Ghost",
+          "posizione": "10",
+          "Materiale": "Q420910089",
+          "testo_breve": "CAPTIVE SCREW TCCE M4X30",
+          "consegna": "31.12.2024",
+          "quantita": "800",
+          "udm": "PZ",
+          "prezzo": "27,70",
+          "divisa": "USD",
+          "testi": "sap-icon://document-text",
+          "testiPop": "B&B HARDWARE    BBCM3S051A30V -- Included CoC"
+        },
+        {
+          "btnType": "Ghost",
+          "posizione": "20",
+          "Materiale": "Q420910089",
+          "testo_breve": "CAPTIVE SCREW TCCE M4X30",
+          "consegna": "31.12.2024",
+          "quantita": "100",
+          "udm": "PZ",
+          "prezzo": "27,70",
+          "divisa": "USD",
+          "testi": "sap-icon://document-text"
+        }
+      ]
+    },
+    {
       "btnType": "Emphasized",
       "ordine": "6500000160",
       "fornitore": "20016 RHEINMETALL AIR DEFENCE AG",
@@ -113,9 +151,9 @@
       "fornitore": "5370 TECMA Spa",
       "testi": "sap-icon://document-text",
       "allegato": "sap-icon://search",
-      "stato": "sap-icon://status-positive",
+      "stato": "sap-icon://status-negative",
       "data": "22.01.2024",
-      "color": "green",
+      "color": "red",
       "posizioni": [
         {
           "btnType": "Ghost",
@@ -293,13 +331,21 @@
     {
       "Ordine": "6500000160",
       "doc": [
+        
         {
-          "name": "Purchade Order",
-          "src": "ordini_acquisto/webapp/public/documents/6500000160.pdf"
-        },
+          "name": "Purchade Order",       
+          "src": "../../public/images/Screenshot_095254.jpg"
+
+        }
+      ]
+    },
+    {
+      "Ordine": "4500041619",
+      "doc": [
         {
           "name": "Quotation No. 32022618",
-          "src": "ordini_acquisto/webapp/public/documents/6500000160_Quotation32022618_20240201135031.137_X.pdf"
+          "src": "../../public/images/Screenshot_095456.jpg"
+          
         }
       ]
     }

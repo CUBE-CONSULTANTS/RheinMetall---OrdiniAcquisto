@@ -8,8 +8,8 @@
   <TreeTable
     id="TreeTableBasic"
     rows="{path: 'ordineModel>/dati', parameters: {arrayNames: ['posizioni']}}"
-    selectionMode="None"
-    class="table" 
+    selectionMode="MultiToggle"
+    class="table"
     cellClick="onOpenBom"
     >
     <extension>
@@ -60,7 +60,7 @@
           <m:Text text="{ordineModel>ordine}" wrapping="false" />      
         </template>
       </Column>
-      <Column width="13rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }" >
+      <Column width="12rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }" >
         <m:Label text="{i18n>Fornitore}" />
         <template>
           <m:Text text="{ordineModel>fornitore}" wrapping="false" />
@@ -78,7 +78,7 @@
           <m:Text text="{ordineModel>Materiale}" wrapping="false"  />   
         </template>
       </Column>
-      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '17.7rem' : '24.9rem' }">
+      <Column width="{= ${userModel>/tipoUtente} === 'Interno' ? '17.2rem' : '23.4rem' }">
         <m:Label text="{i18n>TestoBreve}" />
         <template>
           <m:Text text="{ordineModel>testo_breve}" wrapping="false" />   

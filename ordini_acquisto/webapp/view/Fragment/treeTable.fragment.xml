@@ -8,7 +8,7 @@
   <TreeTable
     id="TreeTableBasic"
     rows="{path: 'ordineModel>/dati', parameters: {arrayNames: ['posizioni']}}"
-    selectionMode="MultiToggle"
+    selectionBehavior="RowOnly"
     class="table"
     cellClick="onOpenBom"
     >
@@ -54,7 +54,7 @@
     </extension>
     
     <columns>
-      <Column width="8.5rem">
+      <Column width="10rem">
         <m:Label text="{i18n>Ordine}" />
         <template>
           <m:Text text="{ordineModel>ordine}" wrapping="false" />      

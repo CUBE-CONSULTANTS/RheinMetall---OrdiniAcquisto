@@ -141,7 +141,8 @@
           "num": "1",
           "prezzo": "8.790,00",
           "divisa": "CHF",
-          "testi": "sap-icon://document-text"
+          "testi": "sap-icon://document-text",
+          "allegato": "sap-icon://search"
         }
       ]
     },

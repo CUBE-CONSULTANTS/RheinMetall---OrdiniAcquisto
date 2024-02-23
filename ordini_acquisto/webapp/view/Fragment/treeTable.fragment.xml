@@ -9,11 +9,11 @@
     id="TreeTableBasic"
     rows="{path: 'ordineModel>/dati', parameters: {arrayNames: ['posizioni']}}"
     selectionBehavior="RowOnly"
-    class="table"
-    cellClick="onOpenBom"
+    class="table sapUiTinyMarginTop" 
+    cellClick="onOpenBom"  
     >
     <extension>
-     <m:OverflowToolbar >
+     <m:OverflowToolbar design="Transparent">
         <m:MultiComboBox
       id="MultiBox1"
       width="300px"
@@ -54,13 +54,13 @@
     </extension>
     
     <columns>
-      <Column>
+      <Column width="9rem">
         <m:Label text="{i18n>Ordine}" />
         <template>
           <m:Text text="{ordineModel>ordine}" wrapping="false" />      
         </template>
       </Column>
-      <Column  hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }" >
+      <Column width="12rem" hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }" >
         <m:Label text="{i18n>Fornitore}" />
         <template>
           <m:Text text="{ordineModel>fornitore}" wrapping="false" />

@@ -1,0 +1,22 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+  <Bar>
+      <contentLeft>
+          <Title
+              text="{i18n>titleprogetto}"
+              titleStyle="H3"
+          />
+      </contentLeft>
+      <contentRight>
+          <Image
+              alt="Rheinmetall Logo"
+              height="38.00000000px"
+              width="100%"
+              src="../public/images/Rheinmetall_Logo_2021.jpg"
+          />
+      </contentRight>
+  </Bar>
+
+</c:FragmentDefinition>

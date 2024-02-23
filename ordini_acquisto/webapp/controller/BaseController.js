@@ -2,13 +2,15 @@ sap.ui.define(
   ["sap/ui/core/mvc/Controller", 
   "sap/ui/model/json/JSONModel",
   "sap/ui/core/Fragment",
+  "ordiniacquisto/ordiniacquisto/model/formatter"
   ],
-  function (Controller, JSONModel,Fragment) {
+  function (Controller, JSONModel,Fragment, formatter) {
     "use strict";
 
     return Controller.extend(
       "ordiniacquisto.ordiniacquisto.controller.BaseController",
       {
+        formatter: formatter,
         /**
          * @override
          */

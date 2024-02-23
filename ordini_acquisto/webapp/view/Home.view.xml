@@ -1,67 +1,38 @@
-<mvc:View controllerName="ordiniacquisto.ordiniacquisto.controller.Home"
-xmlns:mvc="sap.ui.core.mvc"
-displayBlock="true"
-height="100%"
-xmlns:core="sap.ui.core"
-xmlns="sap.m"
-xmlns:layout="sap.ui.layout">
-    <Page
-class="sapUiResponsivePadding--header sapUiResponsivePadding--footer sapUiResponsivePadding--content"
-floatingFooter="true" showFooter="true" 
+<mvc:View
+    controllerName="ordiniacquisto.ordiniacquisto.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    height="100%"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
 >
-    <customHeader>
-        <Bar>
-            <contentLeft>
-                <Title
-                    text="{i18n>titleprogetto}"
-                    titleStyle="H3"
-                />
-            </contentLeft>
-            <contentRight>
-                <Image
-                        alt="Rheinmetall Logo"	
-                        height="38.00000000px"
-                        width="100%"
-                        src="../public/images/Rheinmetall_Logo_2021.jpg"
-                >
-                </Image>
-            </contentRight>
-        </Bar>
-    </customHeader>
-
-    <OverflowToolbar
-        visible="false"
-        design="Solid"
-        class="sapUiSmallMarginTopBottom"
-        height="6vh"
+    <Page
+        class="sapUiResponsivePadding--header sapUiResponsivePadding--footer sapUiResponsivePadding--content"
+        floatingFooter="true" backgroundDesign="Transparent" enableScrolling="false" showFooter="true" 
     >
-        <ToolbarSpacer />
-        <ToolbarSpacer />   
-        <!-- <Title
-            text="AVIOMETAL, Via Sempione 15  Arsago Seprio VA    "
-            titleStyle="H4"
-        /> -->
-    </OverflowToolbar>
-    <content>
-        <core:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.filterBar" />
-        <core:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.treeTable" />
-    </content>
-    <footer>
-        <OverflowToolbar design="Solid" >    
-        <ToolbarSpacer/>
-        <Button
-        visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
-        icon="sap-icon://save"
-        text="{i18n>Save}"
-        type="Emphasized"    
-        />
-        <Button
-        visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
-        icon="sap-icon://save"
-        text="{i18n>Conferma}"
-        type="Emphasized"    
-    />
-        </OverflowToolbar>
-    </footer>
+        <customHeader>
+          <core:Fragment
+          fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Header"
+          />
+        </customHeader>
+        <!-- <subHeader>
+          <core:Fragment
+          fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.SubHeader"
+          />
+        </subHeader> -->
+        <content>
+            <core:Fragment
+                fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.filterBar"
+            />
+            <core:Fragment
+                fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.treeTable"
+            />
+        </content>
+        <footer>
+            <core:Fragment
+                fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Footer"
+            />
+        </footer>
     </Page>
 </mvc:View>

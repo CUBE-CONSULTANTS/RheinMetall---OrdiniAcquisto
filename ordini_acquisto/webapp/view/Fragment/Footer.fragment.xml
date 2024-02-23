@@ -1,0 +1,20 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<OverflowToolbar class="sapUiResponsiveMargin">    
+  <ToolbarSpacer/>
+  <Button
+  visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
+  icon="sap-icon://save"
+  text="{i18n>Save}"
+  type="Emphasized"    
+  />
+  <Button
+  visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
+  icon="sap-icon://save"
+  text="{i18n>Conferma}"
+  type="Emphasized"    
+/>
+  </OverflowToolbar>
+</c:FragmentDefinition>

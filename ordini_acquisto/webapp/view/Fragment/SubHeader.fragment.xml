@@ -1,0 +1,18 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<OverflowToolbar
+  visible="false"
+  design="Transparent"
+  class="sapUiSmallMarginTopBottom"
+  
+>
+  <ToolbarSpacer />
+  <ToolbarSpacer /> 
+  <!-- <Title
+  text="AVIOMETAL, Via Sempione 15  Arsago Seprio VA    "
+  titleStyle="H4"
+/> -->
+</OverflowToolbar>
+</c:FragmentDefinition>

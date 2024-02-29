@@ -1,0 +1,19 @@
+<c:FragmentDefinition
+	xmlns:m="sap.m"
+	xmlns:c="sap.ui.core"
+>
+	<m:Dialog
+		title="{i18n>Nuova Data Proposta}"
+	>
+		<m:DatePicker displayFormat="dd/MM/yyyy"  change="onDatePickerChange" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" class="sapUiResponsiveMargin" width="80%"/>
+
+		<m:buttons>
+			<m:Button
+				press="onCloseDialog"
+				type="Emphasized"
+				text="{i18n>Chiudi}"
+				icon="sap-icon://decline"
+			/>
+		</m:buttons>
+	</m:Dialog>
+</c:FragmentDefinition>

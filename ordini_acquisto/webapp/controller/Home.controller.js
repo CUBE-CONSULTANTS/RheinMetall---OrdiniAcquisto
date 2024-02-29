@@ -28,6 +28,7 @@ sap.ui.define(
           this.setModel(oModel, "ordineModel");
 
           this._pdfViewer = new PDFViewer();
+          this.odaToChange
 			    this.getView().addDependent(this._pdfViewer);
         },
         // onOpenBom: function(oEvent){
@@ -38,7 +39,7 @@ sap.ui.define(
         //   if(oEvent.getParameter("cellControl").getBindingInfo("text").binding.getPath() === 'Materiale'){
         //     if(oEvent.getParameter("cellControl").getBindingInfo("text").binding.getValue() === oDatiMat.Materiale){
         //       this.setModel(oModel, "bomDialog");
-        //       this.onOpenDialog("nDialog","ordiniacquisto.ordiniacquisto.view.Fragment.bomDialog",this,"bomDialog")
+        //       this.onOpenDialog("nDialog","ordiniacquisto.ordiniacquisto.view.Fragment.dataConsegnaDialog",this,"bomDialog")
         //     }
         //   }
         // },
@@ -101,6 +102,19 @@ sap.ui.define(
           onCloseAllegati: function (oEvent){
             oEvent.getSource().getParent().getParent().close()
           },
+          onConsegnaPress: function (oEvent) {
+            debugger
+            this.odaToChange = oEvent.getSource().getBindingContext("ordineModel").getPath()
+            this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.dataConsegnaDialog",this,"ordineModel")
+          
+          },
+          onDatePickerChange: function (oEvent) {
+            debugger
+            let newPropDate = oEvent.getParameters().value
+            this.getModel("ordineModel").setProperty(this.odaToChange + "/nuovaData", newPropDate)
+            
+          }
+
       }
     );
   }

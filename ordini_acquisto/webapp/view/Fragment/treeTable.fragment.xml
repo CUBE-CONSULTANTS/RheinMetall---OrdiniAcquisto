@@ -10,7 +10,6 @@
     rows="{path: 'ordineModel>/dati', parameters: {arrayNames: ['posizioni']}}"
     selectionBehavior="RowOnly"
     class="table sapUiTinyMarginTop" 
-    cellClick="onOpenBom"  
     >
     <extension>
      <m:OverflowToolbar design="Transparent">
@@ -81,7 +80,7 @@
       <Column >
         <m:Label text="{i18n>TestoBreve}" />
         <template>
-          <m:Text text="{ordineModel>testo_breve}" wrapping="false" />   
+          <m:Text text="{ordineModel>testo_breve}" wrapping="false"  />   
         </template>
       </Column>
       <Column  hAlign="Center">
@@ -102,10 +101,10 @@
           <m:Text text="{ordineModel>data}" wrapping="false" />   
         </template>
       </Column>
-      <Column  hAlign="Center">
+      <Column  hAlign="Center" width="6.5rem">
         <m:Label text="{i18n>consegna}" />
         <template>
-          <m:Text text="{ordineModel>consegna}" wrapping="false" />   
+          <m:Button press="onConsegnaPress" visible="{= !${ordineModel>consegna}? false : true }" text="{ordineModel>consegna}"  />   
         </template>
       </Column>
       <Column  hAlign="Center">

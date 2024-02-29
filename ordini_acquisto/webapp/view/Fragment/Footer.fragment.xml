@@ -2,18 +2,18 @@
 	xmlns="sap.m"
 	xmlns:c="sap.ui.core"
 >
-<OverflowToolbar class="sapUiResponsiveMargin">    
+<OverflowToolbar >    
   <ToolbarSpacer/>
   <Button
   visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
   icon="sap-icon://save"
-  text="{i18n>Save}"
+  text="{i18n>Conferma OdA}"
   type="Emphasized"    
   />
   <Button
   visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
   icon="sap-icon://save"
-  text="{i18n>Conferma}"
+  text="{i18n>Conferma OdA}"
   type="Emphasized"    
 />
   </OverflowToolbar>

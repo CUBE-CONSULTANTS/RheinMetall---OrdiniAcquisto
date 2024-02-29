@@ -8,7 +8,7 @@
   <TreeTable
     id="TreeTableBasic"
     rows="{path: 'ordineModel>/dati', parameters: {arrayNames: ['posizioni']}}"
-    selectionBehavior="RowOnly"
+    selectionBehavior="Row"
     class="table sapUiTinyMarginTop" 
     >
     <extension>
@@ -48,7 +48,13 @@
     icon="sap-icon://refresh"
     press="refreshFilters"
   />
-  
+  <m:ToolbarSpacer/>
+  <m:Button
+  icon="sap-icon://journey-change"
+  text="Proponi Nuova Consegna"
+  press="modDataConsegna"
+  type="Emphasized"
+/>
 </m:OverflowToolbar>
     </extension>
     
@@ -104,7 +110,7 @@
       <Column  hAlign="Center" width="6.5rem">
         <m:Label text="{i18n>consegna}" />
         <template>
-          <m:Button press="onConsegnaPress" visible="{= !${ordineModel>consegna}? false : true }" text="{ordineModel>consegna}"  />   
+          <m:Input  visible="{= !${ordineModel>consegna}? false : true }" value="{ordineModel>consegna}" editable="false" />   
         </template>
       </Column>
       <Column  hAlign="Center">

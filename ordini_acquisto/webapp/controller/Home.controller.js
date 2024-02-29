@@ -102,19 +102,16 @@ sap.ui.define(
           onCloseAllegati: function (oEvent){
             oEvent.getSource().getParent().getParent().close()
           },
-          onConsegnaPress: function (oEvent) {
+          modDataConsegna: function (oEvent){
             debugger
-            this.odaToChange = oEvent.getSource().getBindingContext("ordineModel").getPath()
-            this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.dataConsegnaDialog",this,"ordineModel")
-          
-          },
-          onDatePickerChange: function (oEvent) {
-            debugger
-            let newPropDate = oEvent.getParameters().value
-            this.getModel("ordineModel").setProperty(this.odaToChange + "/nuovaData", newPropDate)
+            let aSelected = oEvent.getSource().getParent().getParent().getSelectedIndices() 
+            aSelected.forEach(function(index) {
+              let oRow = oEvent.getSource().getParent().getParent().getRows()[index];
+              oRow.getCells()[7].setProperty("editable", true);
+            })
             
           }
-
+        
       }
     );
   }

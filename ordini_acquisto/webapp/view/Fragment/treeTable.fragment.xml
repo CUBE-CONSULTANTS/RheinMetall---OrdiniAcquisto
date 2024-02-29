@@ -50,6 +50,7 @@
   />
   <m:ToolbarSpacer/>
   <m:Button
+  visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" 
   icon="sap-icon://journey-change"
   text="Proponi Nuova Consegna"
   press="modDataConsegna"

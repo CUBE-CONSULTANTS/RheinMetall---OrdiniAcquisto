@@ -1,0 +1,90 @@
+<c:FragmentDefinition
+xmlns:c="sap.ui.core"
+xmlns:u="sap.ui.unified"
+xmlns:m="sap.m"
+xmlns:table="sap.ui.table"
+>
+<table:TreeTable 
+rows="{path: 'detailModel>/' , parameters: {arrayNames: ['bom']}}"
+  selectionBehavior="RowOnly"
+  class="table sapUiMediumMarginBottom" >
+  <table:columns>
+  <table:Column  hAlign="Center">
+    <m:Label text="{i18n>Pos}" />
+   <table:template>
+    
+  
+      <m:Text text="{detailModel>posizione}" wrapping="false" />   
+    </table:template>
+  </table:Column>
+  <table:Column>
+    <m:Label text="{i18n>Materiale}" />
+      <table:template>
+      <m:ObjectStatus text="{detailModel>Materiale}" state="{= ${detailModel>Materiale} === 'RU403051AE' ? 'Information' : null }"
+         />          
+      </table:template>
+      </table:Column>
+      <table:Column>
+    <m:Label text="{i18n>TestoBreve}" />
+      <table:template>
+      <m:Text text="{detailModel>testo_breve}" wrapping="false" />   
+    </table:template>
+  </table:Column>
+  <table:Column  hAlign="Center">
+    <m:Label text="{i18n>Consegna}" />
+      <table:template>
+      <m:Text text="{detailModel>data}" wrapping="false" />   
+      </table:template>
+    </table:Column>
+    <table:Column hAlign="Center">
+    <m:Label text="{i18n>Quantita}" />
+      <table:template>
+      <m:Text text="{detailModel>quantita}" wrapping="false" />   
+      </table:template>
+  </table:Column>
+  <table:Column  hAlign="Center">
+    <m:Label text="{i18n>UdM}" />
+      <table:template>
+      <m:Text text="{detailModel>udm}" wrapping="false" />   
+      </table:template>
+    </table:Column>
+  
+  <table:Column  width="8.4rem">
+    <m:Label text="{i18n>Leadtime}" />
+    <table:template>
+      <m:DatePicker value="{detailModel>leadtime}" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" visible="{= !${detailModel>leadtime}? false : true }" />   
+      </table:template>
+  </table:Column >
+  <table:Column  width="{= ${userModel>/tipoUtente} === 'Interno' ? '6rem' : '6rem' }" hAlign="Center">
+    <m:Label text="{i18n>Prezzo}" />
+    <table:template>
+      <m:Input value="{detailModel>prezzo}" visible="{= !${detailModel>prezzo}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
+      </table:template>
+  </table:Column >
+  <table:Column  width="{= ${userModel>/tipoUtente} === 'Interno' ? '6rem' : '6rem' }" hAlign="Center">
+    <m:Label text="{i18n>divisa}"  />
+    <table:template>
+      <m:Input  value="{detailModel>divisa}" visible="{= !${detailModel>divisa}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
+      </table:template>
+  </table:Column > 
+  <table:Column  hAlign="Center">
+    <m:Label text="Testi Estesi"  />
+    <table:template>
+      <m:Button  type="Emphasized"
+      icon="{detailModel>tEsteso}"
+      visible="{= !${detailModel>tEsteso}? false : true }"
+      press="onOpenTestiBom" />   
+      </table:template>
+  </table:Column > 
+  <table:Column  width="{= ${userModel>/tipoUtente} === 'Interno' ? '6rem' : '6rem' }" hAlign="Center">
+    <m:Label text="Allegati"  />
+    <table:template>
+      <m:Button  type="Emphasized"
+      icon="{detailModel>Allegati}"
+      visible="{= !${detailModel>Allegati}? false : true }"
+      press="onOpenAllegatoBom" />                       
+    </table:template>
+  </table:Column > 
+</table:columns>
+</table:TreeTable>
+</c:FragmentDefinition>

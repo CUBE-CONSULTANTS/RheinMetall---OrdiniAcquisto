@@ -1,0 +1,31 @@
+<c:FragmentDefinition
+xmlns:m="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<m:FlexBox
+					justifyContent="SpaceBetween"
+        	alignItems="Start"
+				>
+				<m:VBox
+            class="sapUiResponsiveContentPadding vboxDati"
+            width="20%"
+        >
+					<m:Text text="Testo di Testata" />
+					
+
+				</m:VBox>
+				<m:VBox
+            class="sapUiResponsiveContentPadding vboxDati"
+            width="20%"
+        >
+								
+					</m:VBox>
+				 <m:VBox
+            class="sapUiResponsiveContentPadding vboxDati"      
+            alignItems="Start"    
+						width="60%"      
+        >
+					<m:Text text="{i18n>TestoEsteso}: {modDetail>/Qmnum/0/TestoEsteso}" visible="{=${modDetail>/Qmnum/0/TestoEsteso} === '' ? false : true}" />
+				</m:VBox>
+			</m:FlexBox>
+</c:FragmentDefinition>

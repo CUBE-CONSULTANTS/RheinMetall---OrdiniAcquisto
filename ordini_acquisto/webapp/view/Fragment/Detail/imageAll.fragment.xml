@@ -1,0 +1,29 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<Dialog
+    
+	>
+  <Image
+			src="{pdfModel>/source}"
+			useMap=""
+			width=""
+	>
+
+	</Image>
+    
+
+    <footer>
+     <Toolbar
+      width="100%"
+     >
+         <content>
+          <ToolbarSpacer
+          />
+            <Button text="{i18n>Chiudi}" press="onCloseAllegati"/>
+         </content>
+     </Toolbar>
+    </footer>
+</Dialog>
+</c:FragmentDefinition>

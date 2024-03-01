@@ -1,0 +1,41 @@
+<c:FragmentDefinition
+xmlns:c="sap.ui.core"
+xmlns:u="sap.ui.unified"
+xmlns:m="sap.m"
+xmlns:table="sap.ui.table"
+>
+<m:Table
+								items=""
+								growing="true"
+							>
+								<m:columns>
+									<m:Column>
+										<m:Text text="Allegato" />
+									</m:Column>
+									<m:Column>
+										<m:Text text="{i18n>Descrizione}" />
+									</m:Column>		
+                  <m:Column>
+										<m:Text text="{i18n>Carica}" />
+									</m:Column>							
+									<m:Column>
+										<m:Text text="{i18n>Scarica}" />
+									</m:Column>
+								</m:columns>
+								<m:ColumnListItem>
+									<m:cells>
+										<m:Text text="Allegato1" />
+									</m:cells>
+									<m:cells>
+										<m:Text text="TEST TEST TEST" />
+									</m:cells>
+                  <m:cells>
+										<m:Button icon="sap-icon://upload"  type="Emphasized"/>
+									</m:cells>
+									<m:cells>
+										<m:Button icon="sap-icon://download"  type="Emphasized" />
+									</m:cells>
+
+								</m:ColumnListItem>
+							</m:Table>
+</c:FragmentDefinition>

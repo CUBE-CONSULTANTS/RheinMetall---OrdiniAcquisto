@@ -83,12 +83,12 @@ sap.ui.define(
             let oAllegatiMat = this.getModel("ordineModel").getData().allegati[0]
             let oModel = new JSONModel(oAllegatiMat)        
             this.setModel(oModel, "allegatiDialog");
-            this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.listAllegati",this,"allegatiDialog")
+            this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.Detail.listAllegati",this,"allegatiDialog")
           }else if( order === '4500041619'){
             let oAllegatiMat=  this.getModel("ordineModel").getData().allegati[1]
             let oModel = new JSONModel(oAllegatiMat)        
             this.setModel(oModel, "allegatiDialog");
-            this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.listAllegati",this,"allegatiDialog")
+            this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.Detail.listAllegati",this,"allegatiDialog")
           } 
         },
         onSelectAllegato: function (oEvent){
@@ -101,6 +101,19 @@ sap.ui.define(
           },
           onCloseAllegati: function (oEvent){
             oEvent.getSource().getParent().getParent().close()
+          },
+          onOpenDetail: function(oEvent){
+            debugger
+            this.getRouter().navTo("Detail")
+            // let oDatiMat = this.getModel("richiesteModel").getData().bom[0]
+            // let oModel = new JSONModel(oDatiMat)
+        
+            // if(oEvent.getParameter("cellControl").getBindingInfo("text").binding.getPath() === 'Materiale'){
+            //   if(oEvent.getParameter("cellControl").getBindingInfo("text").binding.getValue() === oDatiMat.Materiale){
+            //     this.setModel(oModel, "bomDialog");
+            //     this.onOpenDialog("nDialog","listardo.listardo.view.Fragment.bomDialog",this,"bomDialog")
+            //   }
+            // }
           },
           modDataConsegna: function (oEvent){
             debugger

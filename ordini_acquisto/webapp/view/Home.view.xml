@@ -13,25 +13,25 @@
     >
         <customHeader>
           <core:Fragment
-          fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Header"
+          fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Master.Header"
           />
         </customHeader>
         <!-- <subHeader>
           <core:Fragment
-          fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.SubHeader"
+          fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Master.SubHeader"
           />
         </subHeader> -->
         <content>
             <core:Fragment
-                fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.filterBar"
+                fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Master.filterBar"
             />
             <core:Fragment
-                fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.treeTable"
+                fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Master.treeTable"
             />
         </content>
         <footer>
             <core:Fragment
-                fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Footer"
+                fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Master.Footer"
             />
         </footer>
     </Page>

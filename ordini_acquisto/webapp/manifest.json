@@ -82,6 +82,13 @@
           "name": "RouteHome",
           "pattern": ":?query:",
           "target": ["TargetHome"]
+        },
+        {
+          "name": "Detail",
+          "pattern": "Detail",
+          "target": [
+            "TargetDetail"
+          ]
         }
       ],
       "targets": {
@@ -91,6 +98,13 @@
           "clearControlAggregation": false,
           "viewId": "Home",
           "viewName": "Home"
+        },
+        "TargetDetail": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Detail",
+          "viewName": "Detail"
         }
       }
     },

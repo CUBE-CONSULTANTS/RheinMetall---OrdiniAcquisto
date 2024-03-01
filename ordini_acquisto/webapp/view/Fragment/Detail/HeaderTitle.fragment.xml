@@ -1,0 +1,22 @@
+<c:FragmentDefinition
+xmlns:c="sap.ui.core"
+xmlns="sap.uxap"
+xmlns:layout="sap.ui.layout"
+xmlns:m="sap.m"
+>
+<ObjectPageDynamicHeaderTitle>
+  <heading>
+    <m:Title
+      text="Specifiche Richiesta d'Offerta - 6500000160"
+      class="title"
+    />
+  </heading>
+  <actions>
+    <layout:HorizontalLayout allowWrapping="true">
+      <layout:VerticalLayout>
+        
+      </layout:VerticalLayout>
+    </layout:HorizontalLayout>
+  </actions>
+</ObjectPageDynamicHeaderTitle>
+</c:FragmentDefinition>

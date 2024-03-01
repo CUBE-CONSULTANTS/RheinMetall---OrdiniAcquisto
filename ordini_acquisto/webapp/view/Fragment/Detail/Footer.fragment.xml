@@ -1,0 +1,37 @@
+<c:FragmentDefinition
+xmlns:m="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<m:OverflowToolbar>
+				<m:Button
+					type="Emphasized"
+					text="{i18n>Indietro}"
+					icon="sap-icon://undo"
+					press="onNav"
+				/>
+          
+            <m:ToolbarSpacer/>
+            <m:Button
+                visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
+                icon="sap-icon://print"
+                text="{i18n>StampaRdO}"
+                type="Emphasized"
+                
+            />
+            <m:Button
+            visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
+            icon="sap-icon://save"
+            text="{i18n>SaveBozza}"
+            type="Emphasized"
+            
+        />
+        <m:ToolbarSpacer/>
+        <m:Button
+        visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
+        icon="sap-icon://accept"
+        text="{i18n>Save}"
+        type="Emphasized"
+        
+    />
+			</m:OverflowToolbar>
+</c:FragmentDefinition>

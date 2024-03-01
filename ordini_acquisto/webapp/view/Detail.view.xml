@@ -1,0 +1,62 @@
+<mvc:View
+	controllerName="ordiniacquisto.ordiniacquisto.controller.Detail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:c="sap.ui.core"
+	xmlns:u="sap.ui.unified"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		upperCaseAnchorBar="false"
+		preserveHeaderStateOnScroll="true"
+		showFooter="true"
+		toggleHeaderOnTitleClick="false"
+		backgroundDesignAnchorBar="Solid"
+		headerContentPinnable="false"	
+	>
+		<headerTitle>
+			<c:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Detail.HeaderTitle" />
+		</headerTitle>
+		<headerContent>
+			<c:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Detail.HeaderContent" />
+		</headerContent>
+
+		<sections>
+			<ObjectPageSection
+				titleUppercase="false"
+				title="TESTATA"			
+			>
+				<subSections>
+					<ObjectPageSubSection title="Testata" >
+						<blocks>
+							<c:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Detail.Table" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection
+				titleUppercase="false"
+				title="Materiali"
+			>
+				<subSections>
+					<ObjectPageSubSection
+						title="Materiali"
+					>
+						<blocks>
+							<c:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Detail.TreeTable" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+
+		<footer>
+			<c:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Detail.Footer" />
+		</footer>
+	</ObjectPageLayout>
+</mvc:View>

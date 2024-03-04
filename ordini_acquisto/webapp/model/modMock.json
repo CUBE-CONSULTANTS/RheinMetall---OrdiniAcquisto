@@ -149,8 +149,8 @@
       "testi": "sap-icon://document-text",
       "data": "20.01.2024",
       "allegato": "sap-icon://search",
-      "stato": "sap-icon://status-negative",
-      "color": "red",
+      "stato": "sap-icon://status-in-process",
+      "color": "orange",
       "posizioni": [
         {
           "btnType": "Ghost",

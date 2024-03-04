@@ -8,8 +8,8 @@
     xmlns:layout="sap.ui.layout"
 >
     <Page
-        class="sapUiResponsivePadding--header sapUiResponsivePadding--footer sapUiResponsivePadding--content"
-        floatingFooter="true" backgroundDesign="Transparent" enableScrolling="true" showFooter="true" 
+        class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+         backgroundDesign="Transparent" enableScrolling="true" 
     >
         <customHeader>
           <core:Fragment
@@ -29,10 +29,10 @@
                 fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Master.treeTable"
             />
         </content>
-        <footer>
+        <!-- <footer>
             <core:Fragment
                 fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Master.Footer"
             />
-        </footer>
+        </footer> -->
     </Page>
 </mvc:View>

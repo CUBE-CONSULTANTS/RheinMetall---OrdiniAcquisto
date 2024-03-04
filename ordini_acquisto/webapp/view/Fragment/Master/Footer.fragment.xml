@@ -4,17 +4,17 @@
 >
 <OverflowToolbar >    
   <ToolbarSpacer/>
-  <Button
+  <!-- <Button
   visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }"
   icon="sap-icon://request"
   text="{i18n>Richiedi Modifica}"
   type="Emphasized"    
-  />
-  <Button
-  
+  /> -->
+  <!-- <Button
+  visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false }"
   icon="sap-icon://save"
   text="{i18n>Conferma OdA}"
   type="Emphasized"    
-/>
+/> -->
   </OverflowToolbar>
 </c:FragmentDefinition>

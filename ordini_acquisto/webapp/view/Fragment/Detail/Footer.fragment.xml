@@ -13,8 +13,9 @@ xmlns:m="sap.m"
             <m:ToolbarSpacer/>
 
              <m:Button       
-                icon="{= ${userModel>/tipoUtente} === 'Interno' ? 'sap-icon://cancel' : 'sap-icon://request'}"
-                text="{= ${userModel>/tipoUtente} === 'Interno' ? ${i18n>NonAccettare} : ${i18n>RichiediMod}}"
+                icon='sap-icon://cancel'
+                visible="{= ${userModel>/tipoUtente} === 'Interno' ? true : false}"
+                text="{i18n>NonAccettare}"
                 type="Emphasized"
                 
             />

@@ -84,7 +84,7 @@ sap.ui.define([
         oRow.getCells()[3].setProperty("editable", true);
         oRow.getCells()[4].setProperty("editable", true);
         oRow.getCells()[5].setProperty("editable", true);
-
+        
         oNewRow.getCells()[3].setProperty("editable", true);
         oNewRow.getCells()[4].setProperty("editable", true);
         oNewRow.getCells()[5].setProperty("editable", true);
@@ -95,29 +95,22 @@ sap.ui.define([
         MessageBox.error("Seleziona almeno un elemento")
       }
     },
-    modDataConsegna2: function (oEvent){
-        debugger
-        let aSelected = oEvent.getSource().getParent().getParent().getSelectedIndices() 
-        aSelected.forEach(function(index) {
-          let oCells = oRow.getCells();
-          let aCellValues = []
-          oCells.forEach(function(cell) {
-            if(cell.getBindingInfo("text")){
-              aCellValues.push(cell.getProperty("text"));
-            }else if(cell.getBindingInfo("value")){
-              aCellValues.push(cell.getProperty("value"));
-            }
-          });
-          let oNewRow = oRow.clone();
-          oEvent.getSource().getParent().getParent().insertRow(oNewRow)
-          oCells
-          oCells[4].setProperty("editable", true);
-          oCells[5].setProperty("editable", true);
-          
-        })       
-    },
     onNav: function(oEvent){
+      debugger
       this.getRouter().navTo("RouteHome")
+
+       let oTable = this.getView().byId("idTreeTable"); 
+        if (oTable) {
+          let aRows = oTable.getRows();
+          aRows.forEach(function(row) {
+            let aCells = row.getCells();
+            aCells.forEach(function(cell) {
+              if (cell.setEditable) {
+                cell.setEditable(false);
+              }
+            });
+          });
+        }
     },
 	});
 });

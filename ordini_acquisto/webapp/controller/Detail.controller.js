@@ -29,6 +29,7 @@ sap.ui.define([
       let orderDetail = data.dati.find(element => element.ordine === orderId)
       let oModelDetail = new JSONModel(orderDetail);
       this.setModel(oModelDetail, "detailModel");
+
     },
     onOpenTesti:function(oEvent){
       this.setModel(new JSONModel(), "testiModel");

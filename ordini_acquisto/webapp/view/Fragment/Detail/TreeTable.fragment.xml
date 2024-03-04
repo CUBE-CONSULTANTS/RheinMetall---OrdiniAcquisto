@@ -44,31 +44,31 @@ rows="{path: 'detailModel>/' , parameters: {arrayNames: ['posizioni']}}"
   <table:Column  hAlign="Center">
     <m:Label text="{i18n>Consegna}" />
       <table:template>
-      <m:Text text="{detailModel>consegna}" wrapping="false" />   
+      <m:Input value="{detailModel>consegna}" editable="false" />   
       </table:template>
     </table:Column>
     <table:Column hAlign="Center">
     <m:Label text="{i18n>Quantita}" />
       <table:template>
-      <m:Text text="{detailModel>quantita}" wrapping="false" />   
+      <m:Input value="{detailModel>quantita}" editable="false" />   
       </table:template>
   </table:Column>
   <table:Column  hAlign="Center">
     <m:Label text="{i18n>UdM}" />
       <table:template>
-      <m:Text text="{detailModel>udm}" wrapping="false" />   
+      <m:Input value="{detailModel>udm}" editable="false" />   
       </table:template>
     </table:Column>
   <table:Column  width="{= ${userModel>/tipoUtente} === 'Interno' ? '6rem' : '6rem' }" hAlign="Center">
     <m:Label text="{i18n>Prezzo}" />
     <table:template>
-      <m:Input value="{detailModel>prezzo}" visible="{= !${detailModel>prezzo}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
+      <m:Text text="{detailModel>prezzo}" visible="{= !${detailModel>prezzo}? false : true }" />   
       </table:template>
   </table:Column >
   <table:Column  width="{= ${userModel>/tipoUtente} === 'Interno' ? '6rem' : '6rem' }" hAlign="Center">
     <m:Label text="{i18n>divisa}"  />
     <table:template>
-      <m:Input  value="{detailModel>divisa}" visible="{= !${detailModel>divisa}? false : true }" editable="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" />   
+      <m:Text  text="{detailModel>divisa}" visible="{= !${detailModel>divisa}? false : true }" />   
       </table:template>
   </table:Column > 
   <table:Column  hAlign="Center">

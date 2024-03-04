@@ -11,12 +11,6 @@ xmlns:m="sap.m"
       class="title"
     />
   </heading>
-  <actions>
-    <layout:HorizontalLayout allowWrapping="true">
-      <layout:VerticalLayout>
-        
-      </layout:VerticalLayout>
-    </layout:HorizontalLayout>
-  </actions>
+  
 </ObjectPageDynamicHeaderTitle>
 </c:FragmentDefinition>

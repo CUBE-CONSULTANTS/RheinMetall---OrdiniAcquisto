@@ -104,7 +104,7 @@
       <Column  hAlign="Center" width="6.5rem">
         <m:Label text="{i18n>consegna}" />
         <template>
-          <m:Input  visible="{= !${ordineModel>consegna}? false : true }" value="{ordineModel>consegna}" editable="false" />   
+          <m:Text  visible="{= !${ordineModel>consegna}? false : true }" text="{ordineModel>consegna}" editable="false" />   
         </template>
       </Column>
       <Column  hAlign="Center">

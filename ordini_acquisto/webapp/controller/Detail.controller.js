@@ -2,11 +2,14 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
   "./BaseController",
   "sap/ui/model/json/JSONModel",
-  "sap/ui/core/Fragment"
+  "sap/ui/core/Fragment",
+  "sap/m/MessageBox"
 ], function(
 	Controller,
-  BaseController,
-  JSONModel,Fragment
+	BaseController,
+	JSONModel,
+	Fragment,
+	MessageBox
 ) {
 	"use strict";
 
@@ -55,19 +58,62 @@ sap.ui.define([
     onOpenAllegati:function(oEvent){
       debugger       
       let orderAllegato = oEvent.getSource().getBindingContext("detailModel").getObject()       
-      let pdfModel = new JSONModel(orderAllegato)       
+      let pdfModel = new JSONModel()       
       this.setModel(pdfModel,"pdfModel")
+      this.getModel("pdfModel").setProperty("/source",orderAllegato.src)
       this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.Detail.imageAll",this,"pdfModel")     
     },
     onCloseAllegati: function (oEvent){
         oEvent.getSource().getParent().getParent().close()
     },
-    modDataConsegna: function (oEvent){
+    modDataConsegna: function (oEvent) {
+      debugger;
+      let oTable = oEvent.getSource().getParent().getParent();
+      let aSelectedIndices = oTable.getSelectedIndices();
+      let oModel = oTable.getModel("detailModel"); 
+      if(aSelectedIndices.length > 0){
+      for (let i = aSelectedIndices.length - 1; i >= 0; i--) {
+        let index = aSelectedIndices[i];
+       
+        let oData = oModel.getProperty("/posizioni/" + index); 
+        let oNewData = Object.assign({}, oData);
+        oModel.getData().posizioni.splice(index + 1, 0, oNewData);
+
+        let oRow = oEvent.getSource().getParent().getParent().getRows()[index];
+        let oNewRow = oEvent.getSource().getParent().getParent().getRows()[index +1];
+        oRow.getCells()[3].setProperty("editable", true);
+        oRow.getCells()[4].setProperty("editable", true);
+        oRow.getCells()[5].setProperty("editable", true);
+
+        oNewRow.getCells()[3].setProperty("editable", true);
+        oNewRow.getCells()[4].setProperty("editable", true);
+        oNewRow.getCells()[5].setProperty("editable", true);
+      }
+      oModel.refresh(true);    
+      oTable.clearSelection();
+      }else{
+        MessageBox.error("Seleziona almeno un elemento")
+      }
+    },
+    modDataConsegna2: function (oEvent){
         debugger
         let aSelected = oEvent.getSource().getParent().getParent().getSelectedIndices() 
         aSelected.forEach(function(index) {
-          let oRow = oEvent.getSource().getParent().getParent().getRows()[index];
-          oRow.getCells()[7].setProperty("editable", true);
+          let oCells = oRow.getCells();
+          let aCellValues = []
+          oCells.forEach(function(cell) {
+            if(cell.getBindingInfo("text")){
+              aCellValues.push(cell.getProperty("text"));
+            }else if(cell.getBindingInfo("value")){
+              aCellValues.push(cell.getProperty("value"));
+            }
+          });
+          let oNewRow = oRow.clone();
+          oEvent.getSource().getParent().getParent().insertRow(oNewRow)
+          oCells
+          oCells[4].setProperty("editable", true);
+          oCells[5].setProperty("editable", true);
+          
         })       
     },
     onNav: function(oEvent){

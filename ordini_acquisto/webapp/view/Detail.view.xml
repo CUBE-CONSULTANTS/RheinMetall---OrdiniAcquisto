@@ -31,7 +31,7 @@
 				title="TESTATA"			
 			>
 				<subSections>
-					<ObjectPageSubSection title="Testata" >
+					<ObjectPageSubSection title="Allegati" >
 						<blocks>
 							<c:Fragment fragmentName="ordiniacquisto.ordiniacquisto.view.Fragment.Detail.Table" />
 						</blocks>

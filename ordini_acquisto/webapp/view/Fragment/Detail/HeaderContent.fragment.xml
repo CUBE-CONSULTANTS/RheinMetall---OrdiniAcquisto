@@ -1,4 +1,4 @@
-<c:FragmentDefinition
+<c:FragmentDefinition xmlns:form="sap.ui.layout.form"
     xmlns:m="sap.m"
     xmlns:c="sap.ui.core"
 >
@@ -6,22 +6,23 @@
         justifyContent="SpaceBetween"
         alignItems="Start"
     >
-        <m:VBox
+    <m:VBox
             class="sapUiResponsiveContentPadding vboxDati"
             width="40%"
-        >
-            <m:Text text="{detailModel>/testiPop}" />
-        </m:VBox>
+        >   
+            <form:SimpleForm >
+                <m:Label  text="{i18n>Destinatario}"/>
+                <m:Text text="{detailModel>/Consignee}" />  
+                <m:Label  text="{i18n>Incoterms}"/>
+                <m:Text text="{detailModel>/Incoterms}" />    
+            </form:SimpleForm>
 
+        </m:VBox>
         <m:VBox
             class="sapUiResponsiveContentPadding vboxDati"
-            alignItems="Start"
             width="60%"
         >
-            <m:Text
-                text="{i18n>TestoEsteso}: {modDetail>/Qmnum/0/TestoEsteso}"
-                visible="{=${modDetail>/Qmnum/0/TestoEsteso} === '' ? false : true}"
-            />
+            <m:Text text="{detailModel>/testiPop}" />
         </m:VBox>
     </m:FlexBox>
 </c:FragmentDefinition>

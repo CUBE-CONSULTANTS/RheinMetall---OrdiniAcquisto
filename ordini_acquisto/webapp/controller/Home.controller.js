@@ -51,15 +51,6 @@ sap.ui.define(
             let status = oEvent.getParameter("rowContext").getObject().stato
             status === 'sap-icon://status-positive' ? status = 'ok' : status = 'ko'
             this.getRouter().navTo("Detail",{ Action: orderId, Status: status})
-          },
-          modDataConsegna: function (oEvent){
-            debugger
-            let aSelected = oEvent.getSource().getParent().getParent().getSelectedIndices() 
-            aSelected.forEach(function(index) {
-              let oRow = oEvent.getSource().getParent().getParent().getRows()[index];
-              oRow.getCells()[7].setProperty("editable", true);
-            })
-            
           }
         
       }

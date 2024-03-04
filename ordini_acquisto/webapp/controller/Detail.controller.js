@@ -54,33 +54,22 @@ sap.ui.define([
     },
     onOpenAllegati:function(oEvent){
       debugger       
-      let order = oEvent.getSource().getBindingContext("ordineModel").getObject().ordine
-      if(order === '6500000160'){
-        let oAllegatiMat = this.getModel("ordineModel").getData().allegati[0]
-        let oModel = new JSONModel(oAllegatiMat)        
-        this.setModel(oModel, "allegatiDialog");
-        this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.Detail.listAllegati",this,"allegatiDialog")
-      }else if( order === '4500041619'){
-        let oAllegatiMat=  this.getModel("ordineModel").getData().allegati[1]
-        let oModel = new JSONModel(oAllegatiMat)        
-        this.setModel(oModel, "allegatiDialog");
-        this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.Detail.listAllegati",this,"allegatiDialog")
-      } 
-    },
-    onCloseAllegati: function(oEvent){
-      oEvent.getSource().getParent().getParent().close()
-    },
-    onSelectAllegato: function (oEvent){
-      debugger
-      let src = oEvent.getSource().getBindingContext("allegatiDialog").getObject().src
-      let pdfModel = new JSONModel()
-      pdfModel.setProperty("/source",src)
+      let orderAllegato = oEvent.getSource().getBindingContext("detailModel").getObject()       
+      let pdfModel = new JSONModel(orderAllegato)       
       this.setModel(pdfModel,"pdfModel")
-      this.onOpenDialog("lDialog","ordiniacquisto.ordiniacquisto.view.Fragment.Detail.allegato",this,"pdfModel")       
-      },
-      onCloseAllegati: function (oEvent){
+      this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.Detail.imageAll",this,"pdfModel")     
+    },
+    onCloseAllegati: function (oEvent){
         oEvent.getSource().getParent().getParent().close()
-      },
+    },
+    modDataConsegna: function (oEvent){
+        debugger
+        let aSelected = oEvent.getSource().getParent().getParent().getSelectedIndices() 
+        aSelected.forEach(function(index) {
+          let oRow = oEvent.getSource().getParent().getParent().getRows()[index];
+          oRow.getCells()[7].setProperty("editable", true);
+        })       
+    },
     onNav: function(oEvent){
       this.getRouter().navTo("RouteHome")
     },

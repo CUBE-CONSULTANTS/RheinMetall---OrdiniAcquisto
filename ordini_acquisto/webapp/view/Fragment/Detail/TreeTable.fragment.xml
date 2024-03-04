@@ -8,6 +8,19 @@ xmlns:table="sap.ui.table"
 rows="{path: 'detailModel>/' , parameters: {arrayNames: ['posizioni']}}"
   selectionBehavior="RowSelector"
   class="table sapUiMediumMarginBottom" >
+  <table:extension>
+    <m:OverflowToolbar
+    >
+    <m:ToolbarSpacer/>
+    <m:Button
+    visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }" 
+    icon="sap-icon://journey-change"
+    text="Proponi Nuova Consegna"
+    press="modDataConsegna"
+    type="Emphasized"
+    /> 
+    </m:OverflowToolbar>
+  </table:extension>
   <table:columns>
   <table:Column  hAlign="Center">
     <m:Label text="{i18n>Pos}" />
@@ -71,8 +84,8 @@ rows="{path: 'detailModel>/' , parameters: {arrayNames: ['posizioni']}}"
     <m:Label text="Allegati"  />
     <table:template>
       <m:Button  type="Emphasized"
-      icon="{ordineModel>allegato}"
-      visible="{= !${ordineModel>allegato}? false : true }"
+      icon="{detailModel>allegato}"
+      visible="{= !${detailModel>allegato}? false : true }"
       press="onOpenAllegati"/>                       
     </table:template>
   </table:Column > 

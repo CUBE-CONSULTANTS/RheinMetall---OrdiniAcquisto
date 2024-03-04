@@ -45,7 +45,7 @@ rows="{path: 'detailModel>/' , parameters: {arrayNames: ['posizioni']}}"
   <table:Column  hAlign="Center">
     <m:Label text="{i18n>Consegna}" />
       <table:template>
-      <m:Input value="{detailModel>consegna}" editable="false" />   
+      <m:DatePicker value="{detailModel>consegna}" editable="false" />   
       </table:template>
     </table:Column>
     <table:Column hAlign="Center">
@@ -57,7 +57,7 @@ rows="{path: 'detailModel>/' , parameters: {arrayNames: ['posizioni']}}"
   <table:Column  hAlign="Center">
     <m:Label text="{i18n>UdM}" />
       <table:template>
-      <m:Input value="{detailModel>udm}" editable="false" />   
+      <m:Text text="{detailModel>udm}" />   
       </table:template>
     </table:Column>
   <table:Column  width="{= ${userModel>/tipoUtente} === 'Interno' ? '6rem' : '6rem' }" hAlign="Center">
@@ -73,7 +73,7 @@ rows="{path: 'detailModel>/' , parameters: {arrayNames: ['posizioni']}}"
       </table:template>
   </table:Column > 
   <table:Column  hAlign="Center">
-    <m:Label text="Testi Estesi"  />
+    <m:Label text="Testi"  />
     <table:template>
       <m:Button  type="Emphasized"
       icon="{detailModel>testi}"
@@ -89,6 +89,13 @@ rows="{path: 'detailModel>/' , parameters: {arrayNames: ['posizioni']}}"
       visible="{= !${detailModel>allegato}? false : true }"
       press="onOpenAllegati"/>                       
     </table:template>
+  </table:Column > 
+  <table:Column  hAlign="Center">
+    <m:Label text="Stato"  />
+    <table:template>
+      <c:Icon src="{detailModel>stato}" color="{detailModel>color}" size="1.3rem"
+      />       
+      </table:template>
   </table:Column > 
 </table:columns>
 </table:TreeTable>

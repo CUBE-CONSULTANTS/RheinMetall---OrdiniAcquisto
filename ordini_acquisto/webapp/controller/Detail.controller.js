@@ -84,11 +84,9 @@ sap.ui.define([
         let oNewRow = oEvent.getSource().getParent().getParent().getRows()[index +1];
         oRow.getCells()[3].setProperty("editable", true);
         oRow.getCells()[4].setProperty("editable", true);
-        oRow.getCells()[5].setProperty("editable", true);
         
         oNewRow.getCells()[3].setProperty("editable", true);
         oNewRow.getCells()[4].setProperty("editable", true);
-        oNewRow.getCells()[5].setProperty("editable", true);
       }
       oModel.refresh(true);    
       oTable.clearSelection();

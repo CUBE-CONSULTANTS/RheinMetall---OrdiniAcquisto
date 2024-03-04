@@ -23,7 +23,9 @@
           "divisa": "EUR",
           "num": "1",
           "testi": "sap-icon://document-text",
-          "testiPop": "Inclusi costi NR di 480EUR"
+          "testiPop": "Inclusi costi NR di 480EUR",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         },
         {
           "btnType": "Ghost",
@@ -36,7 +38,9 @@
           "prezzo": "193,00",
           "divisa": "EUR",
           "num": "1",
-          "testi": ""
+          "testi": "",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         },
         {
           "btnType": "Ghost",
@@ -50,7 +54,9 @@
           "divisa": "EUR",
           "num": "1",
           "testi": "sap-icon://document-text",
-          "testiPop": "Inclusi costi NR di 1200Eur"
+          "testiPop": "Inclusi costi NR di 1200Eur",
+          "stato": "sap-icon://status-negative",
+          "color": "red"
         },
         {
           "btnType": "Ghost",
@@ -64,7 +70,9 @@
           "divisa": "EUR",
           "num": "1",
           "testi": "sap-icon://document-text",
-          "testiPop": "Inclusi costi NR di 1200Eur"
+          "testiPop": "Inclusi costi NR di 1200Eur",
+          "stato": "sap-icon://status-negative",
+          "color": "red"
         },
         {
           "btnType": "Ghost",
@@ -78,7 +86,9 @@
           "divisa": "EUR",
           "num": "1",
           "testi": "sap-icon://document-text",
-          "testiPop": "Inclusi costi NR di 1200Eur"
+          "testiPop": "Inclusi costi NR di 1200Eur",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         }
       ],
       "doc": [
@@ -111,7 +121,9 @@
           "prezzo": "27,70",
           "divisa": "USD",
           "testi": "sap-icon://document-text",
-          "testiPop": "B&B HARDWARE    BBCM3S051A30V -- Included CoC"
+          "testiPop": "B&B HARDWARE    BBCM3S051A30V -- Included CoC",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         },
         {
           "btnType": "Ghost",
@@ -123,13 +135,16 @@
           "udm": "PZ",
           "prezzo": "27,70",
           "divisa": "USD",
-          "testi": "sap-icon://document-text"
+          "testi": "sap-icon://document-text",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         }
       ]
     },
     {
       "btnType": "Emphasized",
       "ordine": "6500000160",
+      "testiPop": "Quality: Applicable Quality Requirements according to document RA 405 978 - Quality requirement for suppliers. Special conditions: If applicable, the supplier have to indicate on all Delivery Notices and invoices the export control classification number and the number of the applicable export license and provide the Purchaser with a copy of the export license certificate. 2 weeks before arranging the shipment please contact our import export department Mrs. Marianna Piastrella (m.piastrella@rheinmetall.it) and Mr. Valerio Cafasso (v.cafasso@rheinmetall.it) in order to have the authorization to ship, attaching invoice and packing list. Please submit as soon as it is available copy of your export license that is mandatory to be compliant with Italian export regulation (law 185/90). If you are not submit all the supporting documentation before delivery all payment will be blocked. NOTE: Item identified with s/n are serialized. Please report the Serial number on Transport Document and the packaging label of the individual units      ",
       "fornitore": "20016 RHEINMETALL AIR DEFENCE AG",
       "testi": "sap-icon://document-text",
       "data": "20.01.2024",
@@ -149,7 +164,9 @@
           "prezzo": "8.790,00",
           "divisa": "CHF",
           "testi": "sap-icon://document-text",
-          "allegato": "sap-icon://search"
+          "allegato": "sap-icon://search",
+          "stato": "sap-icon://status-negative",
+          "color": "red"
         }
       ],
       "doc": [       
@@ -181,7 +198,9 @@
           "udm": "PZ",
           "prezzo": "10,56",
           "divisa": "EUR",
-          "testi": ""
+          "testi": "",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         },
         {
           "btnType": "Ghost",
@@ -193,7 +212,9 @@
           "udm": "PZ",
           "prezzo": "24,81",
           "divisa": "EUR",
-          "testi": "sap-icon://document-text"
+          "testi": "sap-icon://document-text",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         },
         {
           "btnType": "Ghost",
@@ -205,7 +226,9 @@
           "udm": "PZ",
           "prezzo": "22,73",
           "divisa": "EUR",
-          "testi": ""
+          "testi": "",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         },
         {
           "btnType": "Ghost",
@@ -217,7 +240,9 @@
           "udm": "PZ",
           "prezzo": "138,10",
           "divisa": "EUR",
-          "testi": ""
+          "testi": "",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         }
       ]
     },
@@ -241,7 +266,9 @@
           "udm": "NRO",
           "prezzo": "675,00",
           "divisa": "EUR",
-          "testi": "sap-icon://document-text"
+          "testi": "sap-icon://document-text",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         }
       ]
     },
@@ -265,7 +292,9 @@
           "udm": "UR",
           "prezzo": "7.760,00",
           "divisa": "EUR",
-          "testi": "sap-icon://document-text"
+          "testi": "sap-icon://document-text",
+          "stato": "sap-icon://status-positive",
+          "color": "green"
         }
       ]
     }

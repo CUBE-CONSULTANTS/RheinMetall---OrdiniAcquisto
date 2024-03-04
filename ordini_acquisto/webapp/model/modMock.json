@@ -165,8 +165,8 @@
           "divisa": "CHF",
           "testi": "sap-icon://document-text",
           "allegato": "sap-icon://search",
-          "stato": "sap-icon://status-negative",
-          "color": "red"
+          "stato": "sap-icon://status-in-process",
+          "color": "orange"
         }
       ],
       "doc": [       

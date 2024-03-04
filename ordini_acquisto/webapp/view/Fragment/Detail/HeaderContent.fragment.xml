@@ -1,31 +1,27 @@
 <c:FragmentDefinition
-xmlns:m="sap.m"
-	xmlns:c="sap.ui.core"
+    xmlns:m="sap.m"
+    xmlns:c="sap.ui.core"
 >
-<m:FlexBox
-					justifyContent="SpaceBetween"
-        	alignItems="Start"
-				>
-				<m:VBox
+    <m:FlexBox
+        justifyContent="SpaceBetween"
+        alignItems="Start"
+    >
+        <m:VBox
             class="sapUiResponsiveContentPadding vboxDati"
-            width="20%"
+            width="40%"
         >
-					<m:Text text="Testo di Testata" />
-					
+            <m:Text text="{detailModel>/testiPop}" />
+        </m:VBox>
 
-				</m:VBox>
-				<m:VBox
+        <m:VBox
             class="sapUiResponsiveContentPadding vboxDati"
-            width="20%"
+            alignItems="Start"
+            width="60%"
         >
-								
-					</m:VBox>
-				 <m:VBox
-            class="sapUiResponsiveContentPadding vboxDati"      
-            alignItems="Start"    
-						width="60%"      
-        >
-					<m:Text text="{i18n>TestoEsteso}: {modDetail>/Qmnum/0/TestoEsteso}" visible="{=${modDetail>/Qmnum/0/TestoEsteso} === '' ? false : true}" />
-				</m:VBox>
-			</m:FlexBox>
+            <m:Text
+                text="{i18n>TestoEsteso}: {modDetail>/Qmnum/0/TestoEsteso}"
+                visible="{=${modDetail>/Qmnum/0/TestoEsteso} === '' ? false : true}"
+            />
+        </m:VBox>
+    </m:FlexBox>
 </c:FragmentDefinition>

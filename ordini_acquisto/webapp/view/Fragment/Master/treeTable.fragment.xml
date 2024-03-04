@@ -140,7 +140,7 @@
           <m:Text text="{ordineModel>udm}" wrapping="false" />   
         </template>
       </Column>
-      <Column  hAlign="Center">
+      <!-- <Column  hAlign="Center">
         <m:Label text="{i18n>Testi}" />
         <template>
           <m:Button
@@ -161,7 +161,7 @@
               press="onOpenAllegati"
               />
         </template>
-      </Column>
+      </Column> -->
       <Column width="4.7rem" hAlign="Center">
         <m:Label text="{i18n>Stato}" />
         <template>

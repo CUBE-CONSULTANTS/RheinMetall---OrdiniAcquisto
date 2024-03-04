@@ -15,9 +15,6 @@ xmlns:table="sap.ui.table"
 									<m:Column>
 										<m:Text text="{i18n>Descrizione}" />
 									</m:Column>		
-                  <m:Column>
-										<m:Text text="{i18n>Carica}" />
-									</m:Column>							
 									<m:Column>
 										<m:Text text="{i18n>Scarica}" />
 									</m:Column>
@@ -29,9 +26,9 @@ xmlns:table="sap.ui.table"
 									<m:cells>
 										<m:Text text="TEST TEST TEST" />
 									</m:cells>
-                  <m:cells>
+                  <!-- <m:cells>
 										<m:Button icon="sap-icon://upload"  type="Emphasized"/>
-									</m:cells>
+									</m:cells> -->
 									<m:cells>
 										<m:Button icon="sap-icon://download"  type="Emphasized" />
 									</m:cells>

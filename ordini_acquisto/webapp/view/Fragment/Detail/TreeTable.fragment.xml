@@ -90,6 +90,14 @@ rows="{path: 'detailModel>/' , parameters: {arrayNames: ['posizioni']}}"
       press="onOpenAllegati"/>                       
     </table:template>
   </table:Column > 
+  <table:Column hAlign="Center">
+    <m:Label text="Carica Allegato"  />
+    <table:template>
+      <m:Button  type="Emphasized"
+      icon="sap-icon://upload"
+      />                       
+    </table:template>
+  </table:Column > 
   <table:Column  hAlign="Center">
     <m:Label text="Stato"  />
     <table:template>

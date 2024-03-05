@@ -153,6 +153,12 @@
               />
         </template>
       </Column> -->
+      <Column hAlign="Center" visible="{= ${userModel>/tipoUtente} === 'Interno' ? false : true }">
+        <m:Label text="{i18n>Carica Allegato}" />
+        <template>
+          <m:Button icon="sap-icon://upload" visible="{= !${ordineModel>upload}? false : true }" />   
+        </template>
+      </Column>  
       <Column width="4.7rem" hAlign="Center">
         <m:Label text="{i18n>Stato}" />
         <template>

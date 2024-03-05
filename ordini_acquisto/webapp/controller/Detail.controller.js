@@ -31,6 +31,31 @@ sap.ui.define([
       this.setModel(oModelDetail, "detailModel");
 
     },
+    addRow: function (oEvent) {  
+      debugger
+      this.onOpenDialog("pDialog","ordiniacquisto.ordiniacquisto.view.Fragment.Detail.uploadAllegati",this,"") 
+    //   let flag
+    //   let oModel = this.getModel("modello");  
+    //   let currentInfo = oModel.getProperty("/info");
+    //   if (!currentInfo || currentInfo.every(v => (
+    //     (v.Cdl !== '' && v.Coin !== '' && v.Cid === '' && v.data_Inizio !== '' && v.ora_Inizio !== '' && v.data_Fine !== '' && v.ora_Fine !== '') ||
+    //     (v.Cdl !== '' && v.Coin !== '' && v.Cid !== '' && v.data_Inizio !== '' && v.ora_Inizio !== '' && v.data_Fine !== '' && v.ora_Fine !== '') ||
+    //     (v.Cdl === '' && v.Coin === '' && v.Cid !== '' && v.data_Inizio !== '' && v.ora_Inizio !== '' && v.data_Fine !== '' && v.ora_Fine !== '')
+    //   ))) {
+    //     if (!currentInfo) {
+    //         oModel.setProperty("/info", [{ Cdl: '', Coin: '', Cid: '', data_Inizio: '', ora_Inizio: '', data_Fine: '', ora_Fine: '' }]);
+    //     } else {
+    //         currentInfo.push({ Cdl: '', Coin: '', Cid: '', data_Inizio: '', ora_Inizio: '', data_Fine: '', ora_Fine: '' });
+    //         oModel.setProperty("/info", currentInfo);
+    //     }
+    //     oModel.refresh();
+    // } else {
+    //   flag = true;
+    // }
+    // if(flag){
+    //     MessageBox.warning("Riempi i campi obbligatori prima di aggiungere una nuova riga");
+    // }
+    },
     onOpenTesti:function(oEvent){
       this.setModel(new JSONModel(), "testiModel");
       let oButton = oEvent.getSource()

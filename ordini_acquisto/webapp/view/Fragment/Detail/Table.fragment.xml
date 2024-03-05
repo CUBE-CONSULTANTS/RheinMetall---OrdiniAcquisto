@@ -4,10 +4,25 @@
 	xmlns:m="sap.m"
 	xmlns:table="sap.ui.table"
 >
+
 	<m:Table
 		items="{detailModel>/doc}"
 		growing="true"
+	> 
+	<m:headerToolbar>
+	<m:OverflowToolbar	
 	>
+	<m:ToolbarSpacer
+	/>
+	<m:Button
+	icon="sap-icon://add"
+	type="Emphasized"
+	text="Aggiungi Allegato"
+	press="addRow"
+	/>
+	</m:OverflowToolbar>
+	</m:headerToolbar>
+
 		<m:columns>
 			<m:Column>
 				<m:Text text="{i18n>allegato}" />

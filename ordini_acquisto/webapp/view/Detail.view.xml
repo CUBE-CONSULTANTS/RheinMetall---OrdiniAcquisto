@@ -26,9 +26,10 @@
 		</headerContent>
 
 		<sections>
+			
 			<ObjectPageSection
 				titleUppercase="false"
-				title="TESTATA"			
+				title="Allegati"			
 			>
 				<subSections>
 					<ObjectPageSubSection title="Allegati" >
